@@ -33,6 +33,17 @@
         cmb_productID.DisplayMember = "FLD_PRODUCT_ID"
         ref_text(cmb_productID.Text)
         qty.Value = "1"
+        ' tptemp.Text = txtprice.Text
+        'Cart
+
+
+        Dim data As DataTable = run_sql_4_query("SELECT * FROM TBL_PURCHASE_A174088")
+        grd_cart.ColumnCount = data.Columns.Count
+        For i = 0 To data.Columns.Count - 1
+            grd_cart.Columns(i).HeaderText = data.Columns(i).ColumnName
+
+        Next
+
 
 
 
@@ -69,7 +80,7 @@
         myreader.Fill(mydatatable)
 
         txtname.Text = mydatatable.Rows(0).Item("FLD_PRODUCT_NAME")
-        txtprice.Text = mydatatable.Rows(0).Item("FLD_PRICE")
+        txtprice.Text = "RM " & mydatatable.Rows(0).Item("FLD_PRICE")
         txtbrand.Text = mydatatable.Rows(0).Item("FLD_BRAND")
         txttype.Text = mydatatable.Rows(0).Item("FLD_TYPE")
         txtcolour.Text = mydatatable.Rows(0).Item("FLD_COLOUR")
@@ -89,5 +100,25 @@
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Private Sub btn_addtocart_Click(sender As Object, e As EventArgs) Handles btn_addtocart.Click
+        For Each row As DataGridViewRow In grd_cart.Rows
+            If (row.Cells(0).Value = lblID.Text And row.Cells(1).Value = cmb_productID.Text) Then
+                row.Cells(2).Value = Val(row.Cells(2).Value) + qty.Text
+                row.Cells(3).Value = row.Cells(2).Value * txtprice.Text
+                ' totalprice.Text = Val(totalprice.Text) + Val(totalprice.Text)
+                Return
+            Else
+
+            End If
+        Next
+    End Sub
+
+
+    Private Sub qty_MouseDown(sender As Object, e As MouseEventArgs) Handles qty.MouseDown, qty.MouseUp, qty.MouseClick
+        Dim quantity As Integer = qty.Text
+        Dim price As Integer = txtprice.Text
+        tptemp.Text = "RM " & quantity * price
     End Sub
 End Class

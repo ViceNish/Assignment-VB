@@ -41,9 +41,11 @@ Partial Class frm_makeorder_a174088
         Me.Label5 = New System.Windows.Forms.Label()
         Me.pic_product = New System.Windows.Forms.PictureBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.tptemp = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
         Me.cmb_productID = New System.Windows.Forms.ComboBox()
         Me.qty = New System.Windows.Forms.NumericUpDown()
-        Me.btn_back = New System.Windows.Forms.Button()
+        Me.btn_addtocart = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txttype = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -58,8 +60,8 @@ Partial Class frm_makeorder_a174088
         Me.Label12 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Label13 = New System.Windows.Forms.Label()
+        Me.grd_cart = New System.Windows.Forms.DataGridView()
+        Me.totalprice = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -72,7 +74,7 @@ Partial Class frm_makeorder_a174088
         Me.GroupBox2.SuspendLayout()
         CType(Me.qty, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.grd_cart, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -116,7 +118,7 @@ Partial Class frm_makeorder_a174088
         Me.grp1.Controls.Add(Me.Label1)
         Me.grp1.Font = New System.Drawing.Font("Times New Roman", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grp1.ForeColor = System.Drawing.Color.Gold
-        Me.grp1.Location = New System.Drawing.Point(31, 157)
+        Me.grp1.Location = New System.Drawing.Point(31, 137)
         Me.grp1.Name = "grp1"
         Me.grp1.Size = New System.Drawing.Size(639, 113)
         Me.grp1.TabIndex = 53
@@ -185,9 +187,9 @@ Partial Class frm_makeorder_a174088
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Font = New System.Drawing.Font("Times New Roman", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.Gold
-        Me.GroupBox1.Location = New System.Drawing.Point(31, 287)
+        Me.GroupBox1.Location = New System.Drawing.Point(31, 267)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(639, 363)
+        Me.GroupBox1.Size = New System.Drawing.Size(639, 427)
         Me.GroupBox1.TabIndex = 54
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "2. Customer Informations"
@@ -195,7 +197,7 @@ Partial Class frm_makeorder_a174088
         'txt_custdate
         '
         Me.txt_custdate.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_custdate.Location = New System.Drawing.Point(272, 313)
+        Me.txt_custdate.Location = New System.Drawing.Point(272, 343)
         Me.txt_custdate.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_custdate.Name = "txt_custdate"
         Me.txt_custdate.Size = New System.Drawing.Size(314, 29)
@@ -207,7 +209,7 @@ Partial Class frm_makeorder_a174088
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Gold
-        Me.Label4.Location = New System.Drawing.Point(116, 313)
+        Me.Label4.Location = New System.Drawing.Point(116, 343)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(148, 29)
@@ -217,7 +219,7 @@ Partial Class frm_makeorder_a174088
         'txt_custname
         '
         Me.txt_custname.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_custname.Location = New System.Drawing.Point(272, 276)
+        Me.txt_custname.Location = New System.Drawing.Point(272, 306)
         Me.txt_custname.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_custname.Name = "txt_custname"
         Me.txt_custname.Size = New System.Drawing.Size(314, 29)
@@ -226,7 +228,7 @@ Partial Class frm_makeorder_a174088
         'txt_custid
         '
         Me.txt_custid.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_custid.Location = New System.Drawing.Point(272, 239)
+        Me.txt_custid.Location = New System.Drawing.Point(272, 269)
         Me.txt_custid.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_custid.Name = "txt_custid"
         Me.txt_custid.ReadOnly = True
@@ -255,7 +257,7 @@ Partial Class frm_makeorder_a174088
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Gold
-        Me.Label2.Location = New System.Drawing.Point(175, 276)
+        Me.Label2.Location = New System.Drawing.Point(175, 306)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(89, 29)
@@ -268,7 +270,7 @@ Partial Class frm_makeorder_a174088
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Gold
-        Me.Label5.Location = New System.Drawing.Point(98, 239)
+        Me.Label5.Location = New System.Drawing.Point(98, 269)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(166, 29)
@@ -289,9 +291,11 @@ Partial Class frm_makeorder_a174088
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox2.Controls.Add(Me.tptemp)
+        Me.GroupBox2.Controls.Add(Me.Label15)
         Me.GroupBox2.Controls.Add(Me.cmb_productID)
         Me.GroupBox2.Controls.Add(Me.qty)
-        Me.GroupBox2.Controls.Add(Me.btn_back)
+        Me.GroupBox2.Controls.Add(Me.btn_addtocart)
         Me.GroupBox2.Controls.Add(Me.Label8)
         Me.GroupBox2.Controls.Add(Me.txttype)
         Me.GroupBox2.Controls.Add(Me.Label7)
@@ -307,19 +311,43 @@ Partial Class frm_makeorder_a174088
         Me.GroupBox2.Controls.Add(Me.pic_product)
         Me.GroupBox2.Font = New System.Drawing.Font("Times New Roman", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.ForeColor = System.Drawing.Color.Gold
-        Me.GroupBox2.Location = New System.Drawing.Point(689, 157)
+        Me.GroupBox2.Location = New System.Drawing.Point(689, 137)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(778, 557)
+        Me.GroupBox2.Size = New System.Drawing.Size(827, 557)
         Me.GroupBox2.TabIndex = 56
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "3. Choose Product"
+        '
+        'tptemp
+        '
+        Me.tptemp.AutoSize = True
+        Me.tptemp.BackColor = System.Drawing.Color.Black
+        Me.tptemp.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tptemp.ForeColor = System.Drawing.Color.Gold
+        Me.tptemp.Location = New System.Drawing.Point(683, 440)
+        Me.tptemp.Name = "tptemp"
+        Me.tptemp.Size = New System.Drawing.Size(26, 29)
+        Me.tptemp.TabIndex = 74
+        Me.tptemp.Text = "1"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.BackColor = System.Drawing.Color.Black
+        Me.Label15.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.Color.Gold
+        Me.Label15.Location = New System.Drawing.Point(529, 440)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(148, 29)
+        Me.Label15.TabIndex = 73
+        Me.Label15.Text = "Total Price : "
         '
         'cmb_productID
         '
         Me.cmb_productID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmb_productID.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmb_productID.FormattingEnabled = True
-        Me.cmb_productID.Location = New System.Drawing.Point(603, 47)
+        Me.cmb_productID.Location = New System.Drawing.Point(626, 47)
         Me.cmb_productID.Margin = New System.Windows.Forms.Padding(4)
         Me.cmb_productID.Name = "cmb_productID"
         Me.cmb_productID.Size = New System.Drawing.Size(168, 29)
@@ -332,18 +360,18 @@ Partial Class frm_makeorder_a174088
         Me.qty.Size = New System.Drawing.Size(102, 28)
         Me.qty.TabIndex = 72
         '
-        'btn_back
+        'btn_addtocart
         '
-        Me.btn_back.BackColor = System.Drawing.Color.Gold
-        Me.btn_back.Font = New System.Drawing.Font("Times New Roman", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_back.ForeColor = System.Drawing.Color.Black
-        Me.btn_back.Location = New System.Drawing.Point(626, 480)
-        Me.btn_back.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btn_back.Name = "btn_back"
-        Me.btn_back.Size = New System.Drawing.Size(145, 43)
-        Me.btn_back.TabIndex = 70
-        Me.btn_back.Text = "Add To Cart"
-        Me.btn_back.UseVisualStyleBackColor = False
+        Me.btn_addtocart.BackColor = System.Drawing.Color.Gold
+        Me.btn_addtocart.Font = New System.Drawing.Font("Times New Roman", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_addtocart.ForeColor = System.Drawing.Color.Black
+        Me.btn_addtocart.Location = New System.Drawing.Point(649, 480)
+        Me.btn_addtocart.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btn_addtocart.Name = "btn_addtocart"
+        Me.btn_addtocart.Size = New System.Drawing.Size(145, 43)
+        Me.btn_addtocart.TabIndex = 70
+        Me.btn_addtocart.Text = "Add To Cart"
+        Me.btn_addtocart.UseVisualStyleBackColor = False
         '
         'Label8
         '
@@ -388,7 +416,7 @@ Partial Class frm_makeorder_a174088
         Me.txtname.ForeColor = System.Drawing.Color.Gold
         Me.txtname.Location = New System.Drawing.Point(224, 274)
         Me.txtname.Name = "txtname"
-        Me.txtname.Size = New System.Drawing.Size(504, 29)
+        Me.txtname.Size = New System.Drawing.Size(579, 29)
         Me.txtname.TabIndex = 65
         Me.txtname.Text = "1"
         '
@@ -482,7 +510,7 @@ Partial Class frm_makeorder_a174088
         Me.Label12.BackColor = System.Drawing.Color.Black
         Me.Label12.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.Gold
-        Me.Label12.Location = New System.Drawing.Point(444, 47)
+        Me.Label12.Location = New System.Drawing.Point(467, 47)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(153, 29)
         Me.Label12.TabIndex = 56
@@ -492,12 +520,12 @@ Partial Class frm_makeorder_a174088
         '
         Me.GroupBox3.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox3.Controls.Add(Me.Button1)
-        Me.GroupBox3.Controls.Add(Me.DataGridView1)
+        Me.GroupBox3.Controls.Add(Me.grd_cart)
         Me.GroupBox3.Font = New System.Drawing.Font("Times New Roman", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.ForeColor = System.Drawing.Color.Gold
-        Me.GroupBox3.Location = New System.Drawing.Point(35, 665)
+        Me.GroupBox3.Location = New System.Drawing.Point(31, 711)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(639, 223)
+        Me.GroupBox3.Size = New System.Drawing.Size(1187, 267)
         Me.GroupBox3.TabIndex = 57
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "4. On Cart"
@@ -507,7 +535,7 @@ Partial Class frm_makeorder_a174088
         Me.Button1.BackColor = System.Drawing.Color.Gold
         Me.Button1.Font = New System.Drawing.Font("Times New Roman", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(236, 158)
+        Me.Button1.Location = New System.Drawing.Point(553, 201)
         Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(145, 43)
@@ -515,33 +543,33 @@ Partial Class frm_makeorder_a174088
         Me.Button1.Text = "Remove"
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'DataGridView1
+        'grd_cart
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(29, 35)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(566, 119)
-        Me.DataGridView1.TabIndex = 41
+        Me.grd_cart.AllowUserToAddRows = False
+        Me.grd_cart.AllowUserToDeleteRows = False
+        Me.grd_cart.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.grd_cart.BackgroundColor = System.Drawing.Color.White
+        Me.grd_cart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.grd_cart.Location = New System.Drawing.Point(29, 35)
+        Me.grd_cart.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.grd_cart.Name = "grd_cart"
+        Me.grd_cart.ReadOnly = True
+        Me.grd_cart.RowHeadersWidth = 51
+        Me.grd_cart.RowTemplate.Height = 24
+        Me.grd_cart.Size = New System.Drawing.Size(1128, 162)
+        Me.grd_cart.TabIndex = 41
         '
-        'Label13
+        'totalprice
         '
-        Me.Label13.AutoSize = True
-        Me.Label13.BackColor = System.Drawing.Color.Black
-        Me.Label13.Font = New System.Drawing.Font("Times New Roman", 22.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.Gold
-        Me.Label13.Location = New System.Drawing.Point(934, 816)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(38, 43)
-        Me.Label13.TabIndex = 64
-        Me.Label13.Text = "1"
+        Me.totalprice.AutoSize = True
+        Me.totalprice.BackColor = System.Drawing.Color.Black
+        Me.totalprice.Font = New System.Drawing.Font("Times New Roman", 22.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.totalprice.ForeColor = System.Drawing.Color.Gold
+        Me.totalprice.Location = New System.Drawing.Point(1290, 773)
+        Me.totalprice.Name = "totalprice"
+        Me.totalprice.Size = New System.Drawing.Size(38, 43)
+        Me.totalprice.TabIndex = 64
+        Me.totalprice.Text = "1"
         '
         'Label14
         '
@@ -549,7 +577,7 @@ Partial Class frm_makeorder_a174088
         Me.Label14.BackColor = System.Drawing.Color.Black
         Me.Label14.Font = New System.Drawing.Font("Times New Roman", 22.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.Color.Gold
-        Me.Label14.Location = New System.Drawing.Point(708, 816)
+        Me.Label14.Location = New System.Drawing.Point(1261, 711)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(231, 43)
         Me.Label14.TabIndex = 63
@@ -560,7 +588,7 @@ Partial Class frm_makeorder_a174088
         Me.Button2.BackColor = System.Drawing.Color.Gold
         Me.Button2.Font = New System.Drawing.Font("Times New Roman", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.Black
-        Me.Button2.Location = New System.Drawing.Point(1207, 740)
+        Me.Button2.Location = New System.Drawing.Point(1250, 829)
         Me.Button2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(253, 197)
@@ -572,7 +600,7 @@ Partial Class frm_makeorder_a174088
         '
         Me.Button3.BackColor = System.Drawing.Color.Gold
         Me.Button3.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(39, 907)
+        Me.Button3.Location = New System.Drawing.Point(35, 997)
         Me.Button3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(120, 49)
@@ -585,10 +613,10 @@ Partial Class frm_makeorder_a174088
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1488, 973)
+        Me.ClientSize = New System.Drawing.Size(1561, 1072)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.totalprice)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
@@ -611,7 +639,7 @@ Partial Class frm_makeorder_a174088
         Me.GroupBox2.PerformLayout()
         CType(Me.qty, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.grd_cart, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -647,14 +675,16 @@ Partial Class frm_makeorder_a174088
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
-    Friend WithEvents btn_back As Button
+    Friend WithEvents btn_addtocart As Button
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents Button1 As Button
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Label13 As Label
+    Friend WithEvents grd_cart As DataGridView
+    Friend WithEvents totalprice As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents qty As NumericUpDown
     Friend WithEvents Button3 As Button
     Friend WithEvents cmb_productID As ComboBox
+    Friend WithEvents tptemp As Label
+    Friend WithEvents Label15 As Label
 End Class
