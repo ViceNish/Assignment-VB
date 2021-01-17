@@ -32,17 +32,17 @@ Partial Class frm_makeorder_a174088
         Me.lblID = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txt_custdate = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.txt_brand = New System.Windows.Forms.TextBox()
-        Me.txt_id = New System.Windows.Forms.TextBox()
+        Me.txt_custname = New System.Windows.Forms.TextBox()
+        Me.txt_custid = New System.Windows.Forms.TextBox()
         Me.grd_customer = New System.Windows.Forms.DataGridView()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.pic_product = New System.Windows.Forms.PictureBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
-        Me.lst_product = New System.Windows.Forms.ListBox()
+        Me.cmb_productID = New System.Windows.Forms.ComboBox()
+        Me.qty = New System.Windows.Forms.NumericUpDown()
         Me.btn_back = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txttype = New System.Windows.Forms.Label()
@@ -52,7 +52,6 @@ Partial Class frm_makeorder_a174088
         Me.txtbrand = New System.Windows.Forms.Label()
         Me.txtcolour = New System.Windows.Forms.Label()
         Me.txtprice = New System.Windows.Forms.Label()
-        Me.txtid = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -71,7 +70,7 @@ Partial Class frm_makeorder_a174088
         CType(Me.grd_customer, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pic_product, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.qty, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -177,10 +176,10 @@ Partial Class frm_makeorder_a174088
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.txt_custdate)
         Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.txt_brand)
-        Me.GroupBox1.Controls.Add(Me.txt_id)
+        Me.GroupBox1.Controls.Add(Me.txt_custname)
+        Me.GroupBox1.Controls.Add(Me.txt_custid)
         Me.GroupBox1.Controls.Add(Me.grd_customer)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label5)
@@ -188,19 +187,19 @@ Partial Class frm_makeorder_a174088
         Me.GroupBox1.ForeColor = System.Drawing.Color.Gold
         Me.GroupBox1.Location = New System.Drawing.Point(31, 287)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(639, 427)
+        Me.GroupBox1.Size = New System.Drawing.Size(639, 363)
         Me.GroupBox1.TabIndex = 54
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "2. Customer Informations"
         '
-        'TextBox1
+        'txt_custdate
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(272, 313)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(314, 29)
-        Me.TextBox1.TabIndex = 44
+        Me.txt_custdate.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_custdate.Location = New System.Drawing.Point(272, 313)
+        Me.txt_custdate.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_custdate.Name = "txt_custdate"
+        Me.txt_custdate.Size = New System.Drawing.Size(314, 29)
+        Me.txt_custdate.TabIndex = 44
         '
         'Label4
         '
@@ -215,24 +214,24 @@ Partial Class frm_makeorder_a174088
         Me.Label4.TabIndex = 43
         Me.Label4.Text = "Order Date :"
         '
-        'txt_brand
+        'txt_custname
         '
-        Me.txt_brand.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_brand.Location = New System.Drawing.Point(272, 276)
-        Me.txt_brand.Margin = New System.Windows.Forms.Padding(4)
-        Me.txt_brand.Name = "txt_brand"
-        Me.txt_brand.Size = New System.Drawing.Size(314, 29)
-        Me.txt_brand.TabIndex = 42
+        Me.txt_custname.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_custname.Location = New System.Drawing.Point(272, 276)
+        Me.txt_custname.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_custname.Name = "txt_custname"
+        Me.txt_custname.Size = New System.Drawing.Size(314, 29)
+        Me.txt_custname.TabIndex = 42
         '
-        'txt_id
+        'txt_custid
         '
-        Me.txt_id.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_id.Location = New System.Drawing.Point(272, 239)
-        Me.txt_id.Margin = New System.Windows.Forms.Padding(4)
-        Me.txt_id.Name = "txt_id"
-        Me.txt_id.ReadOnly = True
-        Me.txt_id.Size = New System.Drawing.Size(129, 29)
-        Me.txt_id.TabIndex = 41
+        Me.txt_custid.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_custid.Location = New System.Drawing.Point(272, 239)
+        Me.txt_custid.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_custid.Name = "txt_custid"
+        Me.txt_custid.ReadOnly = True
+        Me.txt_custid.Size = New System.Drawing.Size(129, 29)
+        Me.txt_custid.TabIndex = 41
         '
         'grd_customer
         '
@@ -290,8 +289,8 @@ Partial Class frm_makeorder_a174088
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBox2.Controls.Add(Me.NumericUpDown1)
-        Me.GroupBox2.Controls.Add(Me.lst_product)
+        Me.GroupBox2.Controls.Add(Me.cmb_productID)
+        Me.GroupBox2.Controls.Add(Me.qty)
         Me.GroupBox2.Controls.Add(Me.btn_back)
         Me.GroupBox2.Controls.Add(Me.Label8)
         Me.GroupBox2.Controls.Add(Me.txttype)
@@ -301,7 +300,6 @@ Partial Class frm_makeorder_a174088
         Me.GroupBox2.Controls.Add(Me.txtbrand)
         Me.GroupBox2.Controls.Add(Me.txtcolour)
         Me.GroupBox2.Controls.Add(Me.txtprice)
-        Me.GroupBox2.Controls.Add(Me.txtid)
         Me.GroupBox2.Controls.Add(Me.Label9)
         Me.GroupBox2.Controls.Add(Me.Label10)
         Me.GroupBox2.Controls.Add(Me.Label11)
@@ -311,33 +309,35 @@ Partial Class frm_makeorder_a174088
         Me.GroupBox2.ForeColor = System.Drawing.Color.Gold
         Me.GroupBox2.Location = New System.Drawing.Point(689, 157)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(741, 557)
+        Me.GroupBox2.Size = New System.Drawing.Size(778, 557)
         Me.GroupBox2.TabIndex = 56
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "3. Choose Product"
         '
-        'NumericUpDown1
+        'cmb_productID
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(240, 515)
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(102, 28)
-        Me.NumericUpDown1.TabIndex = 72
+        Me.cmb_productID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmb_productID.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmb_productID.FormattingEnabled = True
+        Me.cmb_productID.Location = New System.Drawing.Point(603, 47)
+        Me.cmb_productID.Margin = New System.Windows.Forms.Padding(4)
+        Me.cmb_productID.Name = "cmb_productID"
+        Me.cmb_productID.Size = New System.Drawing.Size(168, 29)
+        Me.cmb_productID.TabIndex = 40
         '
-        'lst_product
+        'qty
         '
-        Me.lst_product.FormattingEnabled = True
-        Me.lst_product.ItemHeight = 20
-        Me.lst_product.Location = New System.Drawing.Point(493, 37)
-        Me.lst_product.Name = "lst_product"
-        Me.lst_product.Size = New System.Drawing.Size(157, 224)
-        Me.lst_product.TabIndex = 71
+        Me.qty.Location = New System.Drawing.Point(229, 484)
+        Me.qty.Name = "qty"
+        Me.qty.Size = New System.Drawing.Size(102, 28)
+        Me.qty.TabIndex = 72
         '
         'btn_back
         '
         Me.btn_back.BackColor = System.Drawing.Color.Gold
         Me.btn_back.Font = New System.Drawing.Font("Times New Roman", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_back.ForeColor = System.Drawing.Color.Black
-        Me.btn_back.Location = New System.Drawing.Point(581, 481)
+        Me.btn_back.Location = New System.Drawing.Point(626, 480)
         Me.btn_back.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btn_back.Name = "btn_back"
         Me.btn_back.Size = New System.Drawing.Size(145, 43)
@@ -351,7 +351,7 @@ Partial Class frm_makeorder_a174088
         Me.Label8.BackColor = System.Drawing.Color.Black
         Me.Label8.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Gold
-        Me.Label8.Location = New System.Drawing.Point(92, 509)
+        Me.Label8.Location = New System.Drawing.Point(81, 483)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(128, 29)
         Me.Label8.TabIndex = 68
@@ -363,7 +363,7 @@ Partial Class frm_makeorder_a174088
         Me.txttype.BackColor = System.Drawing.Color.Black
         Me.txttype.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttype.ForeColor = System.Drawing.Color.Gold
-        Me.txttype.Location = New System.Drawing.Point(236, 420)
+        Me.txttype.Location = New System.Drawing.Point(225, 394)
         Me.txttype.Name = "txttype"
         Me.txttype.Size = New System.Drawing.Size(26, 29)
         Me.txttype.TabIndex = 67
@@ -375,7 +375,7 @@ Partial Class frm_makeorder_a174088
         Me.Label7.BackColor = System.Drawing.Color.Black
         Me.Label7.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Gold
-        Me.Label7.Location = New System.Drawing.Point(136, 420)
+        Me.Label7.Location = New System.Drawing.Point(125, 394)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(84, 29)
         Me.Label7.TabIndex = 66
@@ -386,7 +386,7 @@ Partial Class frm_makeorder_a174088
         Me.txtname.BackColor = System.Drawing.Color.Black
         Me.txtname.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtname.ForeColor = System.Drawing.Color.Gold
-        Me.txtname.Location = New System.Drawing.Point(235, 300)
+        Me.txtname.Location = New System.Drawing.Point(224, 274)
         Me.txtname.Name = "txtname"
         Me.txtname.Size = New System.Drawing.Size(504, 29)
         Me.txtname.TabIndex = 65
@@ -398,7 +398,7 @@ Partial Class frm_makeorder_a174088
         Me.Label6.BackColor = System.Drawing.Color.Black
         Me.Label6.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Gold
-        Me.Label6.Location = New System.Drawing.Point(33, 300)
+        Me.Label6.Location = New System.Drawing.Point(22, 274)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(187, 29)
         Me.Label6.TabIndex = 64
@@ -410,7 +410,7 @@ Partial Class frm_makeorder_a174088
         Me.txtbrand.BackColor = System.Drawing.Color.Black
         Me.txtbrand.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtbrand.ForeColor = System.Drawing.Color.Gold
-        Me.txtbrand.Location = New System.Drawing.Point(236, 378)
+        Me.txtbrand.Location = New System.Drawing.Point(225, 352)
         Me.txtbrand.Name = "txtbrand"
         Me.txtbrand.Size = New System.Drawing.Size(26, 29)
         Me.txtbrand.TabIndex = 63
@@ -422,7 +422,7 @@ Partial Class frm_makeorder_a174088
         Me.txtcolour.BackColor = System.Drawing.Color.Black
         Me.txtcolour.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtcolour.ForeColor = System.Drawing.Color.Gold
-        Me.txtcolour.Location = New System.Drawing.Point(235, 466)
+        Me.txtcolour.Location = New System.Drawing.Point(224, 440)
         Me.txtcolour.Name = "txtcolour"
         Me.txtcolour.Size = New System.Drawing.Size(26, 29)
         Me.txtcolour.TabIndex = 62
@@ -434,23 +434,11 @@ Partial Class frm_makeorder_a174088
         Me.txtprice.BackColor = System.Drawing.Color.Black
         Me.txtprice.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtprice.ForeColor = System.Drawing.Color.Gold
-        Me.txtprice.Location = New System.Drawing.Point(236, 338)
+        Me.txtprice.Location = New System.Drawing.Point(225, 312)
         Me.txtprice.Name = "txtprice"
         Me.txtprice.Size = New System.Drawing.Size(26, 29)
         Me.txtprice.TabIndex = 61
         Me.txtprice.Text = "1"
-        '
-        'txtid
-        '
-        Me.txtid.AutoSize = True
-        Me.txtid.BackColor = System.Drawing.Color.Black
-        Me.txtid.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtid.ForeColor = System.Drawing.Color.Gold
-        Me.txtid.Location = New System.Drawing.Point(236, 262)
-        Me.txtid.Name = "txtid"
-        Me.txtid.Size = New System.Drawing.Size(26, 29)
-        Me.txtid.TabIndex = 60
-        Me.txtid.Text = "1"
         '
         'Label9
         '
@@ -458,7 +446,7 @@ Partial Class frm_makeorder_a174088
         Me.Label9.BackColor = System.Drawing.Color.Black
         Me.Label9.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.Gold
-        Me.Label9.Location = New System.Drawing.Point(114, 466)
+        Me.Label9.Location = New System.Drawing.Point(103, 440)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(106, 29)
         Me.Label9.TabIndex = 59
@@ -470,7 +458,7 @@ Partial Class frm_makeorder_a174088
         Me.Label10.BackColor = System.Drawing.Color.Black
         Me.Label10.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.Gold
-        Me.Label10.Location = New System.Drawing.Point(131, 338)
+        Me.Label10.Location = New System.Drawing.Point(120, 312)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(89, 29)
         Me.Label10.TabIndex = 58
@@ -482,7 +470,7 @@ Partial Class frm_makeorder_a174088
         Me.Label11.BackColor = System.Drawing.Color.Black
         Me.Label11.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.Gold
-        Me.Label11.Location = New System.Drawing.Point(119, 378)
+        Me.Label11.Location = New System.Drawing.Point(108, 352)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(101, 29)
         Me.Label11.TabIndex = 57
@@ -494,7 +482,7 @@ Partial Class frm_makeorder_a174088
         Me.Label12.BackColor = System.Drawing.Color.Black
         Me.Label12.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.Gold
-        Me.Label12.Location = New System.Drawing.Point(67, 262)
+        Me.Label12.Location = New System.Drawing.Point(444, 47)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(153, 29)
         Me.Label12.TabIndex = 56
@@ -507,7 +495,7 @@ Partial Class frm_makeorder_a174088
         Me.GroupBox3.Controls.Add(Me.DataGridView1)
         Me.GroupBox3.Font = New System.Drawing.Font("Times New Roman", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.ForeColor = System.Drawing.Color.Gold
-        Me.GroupBox3.Location = New System.Drawing.Point(31, 715)
+        Me.GroupBox3.Location = New System.Drawing.Point(35, 665)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(639, 223)
         Me.GroupBox3.TabIndex = 57
@@ -549,7 +537,7 @@ Partial Class frm_makeorder_a174088
         Me.Label13.BackColor = System.Drawing.Color.Black
         Me.Label13.Font = New System.Drawing.Font("Times New Roman", 22.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.Gold
-        Me.Label13.Location = New System.Drawing.Point(934, 829)
+        Me.Label13.Location = New System.Drawing.Point(934, 816)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(38, 43)
         Me.Label13.TabIndex = 64
@@ -561,7 +549,7 @@ Partial Class frm_makeorder_a174088
         Me.Label14.BackColor = System.Drawing.Color.Black
         Me.Label14.Font = New System.Drawing.Font("Times New Roman", 22.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.Color.Gold
-        Me.Label14.Location = New System.Drawing.Point(708, 829)
+        Me.Label14.Location = New System.Drawing.Point(708, 816)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(231, 43)
         Me.Label14.TabIndex = 63
@@ -572,10 +560,10 @@ Partial Class frm_makeorder_a174088
         Me.Button2.BackColor = System.Drawing.Color.Gold
         Me.Button2.Font = New System.Drawing.Font("Times New Roman", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.Black
-        Me.Button2.Location = New System.Drawing.Point(1204, 768)
+        Me.Button2.Location = New System.Drawing.Point(1207, 740)
         Me.Button2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(226, 213)
+        Me.Button2.Size = New System.Drawing.Size(253, 197)
         Me.Button2.TabIndex = 71
         Me.Button2.Text = "Check Out"
         Me.Button2.UseVisualStyleBackColor = False
@@ -584,7 +572,7 @@ Partial Class frm_makeorder_a174088
         '
         Me.Button3.BackColor = System.Drawing.Color.Gold
         Me.Button3.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(35, 957)
+        Me.Button3.Location = New System.Drawing.Point(39, 907)
         Me.Button3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(120, 49)
@@ -597,7 +585,7 @@ Partial Class frm_makeorder_a174088
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1479, 1017)
+        Me.ClientSize = New System.Drawing.Size(1488, 973)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label13)
@@ -621,7 +609,7 @@ Partial Class frm_makeorder_a174088
         CType(Me.pic_product, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.qty, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -641,9 +629,9 @@ Partial Class frm_makeorder_a174088
     Friend WithEvents Label2 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents grd_customer As DataGridView
-    Friend WithEvents txt_id As TextBox
-    Friend WithEvents txt_brand As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txt_custid As TextBox
+    Friend WithEvents txt_custname As TextBox
+    Friend WithEvents txt_custdate As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents pic_product As PictureBox
     Friend WithEvents GroupBox2 As GroupBox
@@ -655,19 +643,18 @@ Partial Class frm_makeorder_a174088
     Friend WithEvents txtbrand As Label
     Friend WithEvents txtcolour As Label
     Friend WithEvents txtprice As Label
-    Friend WithEvents txtid As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents btn_back As Button
-    Friend WithEvents lst_product As ListBox
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents Button1 As Button
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label13 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents Button2 As Button
-    Friend WithEvents NumericUpDown1 As NumericUpDown
+    Friend WithEvents qty As NumericUpDown
     Friend WithEvents Button3 As Button
+    Friend WithEvents cmb_productID As ComboBox
 End Class
