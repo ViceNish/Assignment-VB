@@ -28,12 +28,13 @@
         grd_customer.DataSource = run_sql_4_query("SELECT FLD_CUSTOMER_ID, FLD_CUSTOMER_NAME FROM TBL_CUSTOMER_A174088")
         grd_customer.Sort(grd_customer.Columns(0), System.ComponentModel.ListSortDirection.Ascending)
         get_current_code()
+        grd_customer.DefaultCellStyle.SelectionForeColor = Color.Black
         'For Product
         cmb_productID.DataSource = run_sql_4_query("SELECT FLD_PRODUCT_ID FROM TBL_PRODUCT_A174088 ORDER BY FLD_PRODUCT_ID ASC")
         cmb_productID.DisplayMember = "FLD_PRODUCT_ID"
         ref_text(cmb_productID.Text)
         qty.Value = "1"
-        ' tptemp.Text = txtprice.Text
+        tptemp.Text = txtprice.Text
         'Cart
 
 
@@ -107,12 +108,14 @@
             If (row.Cells(0).Value = lblID.Text And row.Cells(1).Value = cmb_productID.Text) Then
                 row.Cells(2).Value = Val(row.Cells(2).Value) + qty.Text
                 row.Cells(3).Value = row.Cells(2).Value * txtprice.Text
-                ' totalprice.Text = Val(totalprice.Text) + Val(totalprice.Text)
+                totalprice.Text = Val(tptemp.Text) + Val(totalprice.Text)
                 Return
             Else
 
             End If
         Next
+        grd_cart.Rows.Add(lblID.Text, cmb_productID.Text, tptemp.Text)
+        totalprice.Text = Val(tptemp.Text) + Val(totalprice.Text)
     End Sub
 
 

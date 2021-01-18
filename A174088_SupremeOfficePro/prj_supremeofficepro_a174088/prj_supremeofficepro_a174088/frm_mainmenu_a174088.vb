@@ -148,7 +148,7 @@
 
     End Sub
 
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub btn_makeorder_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
         frm_makeorder_a174088.ShowDialog()
     End Sub
 End Class

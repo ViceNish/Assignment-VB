@@ -324,7 +324,7 @@ Partial Class frm_makeorder_a174088
         Me.tptemp.BackColor = System.Drawing.Color.Black
         Me.tptemp.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tptemp.ForeColor = System.Drawing.Color.Gold
-        Me.tptemp.Location = New System.Drawing.Point(683, 440)
+        Me.tptemp.Location = New System.Drawing.Point(645, 440)
         Me.tptemp.Name = "tptemp"
         Me.tptemp.Size = New System.Drawing.Size(26, 29)
         Me.tptemp.TabIndex = 74
@@ -336,7 +336,7 @@ Partial Class frm_makeorder_a174088
         Me.Label15.BackColor = System.Drawing.Color.Black
         Me.Label15.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.Gold
-        Me.Label15.Location = New System.Drawing.Point(529, 440)
+        Me.Label15.Location = New System.Drawing.Point(491, 440)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(148, 29)
         Me.Label15.TabIndex = 73
@@ -355,7 +355,7 @@ Partial Class frm_makeorder_a174088
         '
         'qty
         '
-        Me.qty.Location = New System.Drawing.Point(229, 484)
+        Me.qty.Location = New System.Drawing.Point(229, 516)
         Me.qty.Name = "qty"
         Me.qty.Size = New System.Drawing.Size(102, 28)
         Me.qty.TabIndex = 72
@@ -379,7 +379,7 @@ Partial Class frm_makeorder_a174088
         Me.Label8.BackColor = System.Drawing.Color.Black
         Me.Label8.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Gold
-        Me.Label8.Location = New System.Drawing.Point(81, 483)
+        Me.Label8.Location = New System.Drawing.Point(81, 515)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(128, 29)
         Me.Label8.TabIndex = 68
@@ -391,7 +391,7 @@ Partial Class frm_makeorder_a174088
         Me.txttype.BackColor = System.Drawing.Color.Black
         Me.txttype.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttype.ForeColor = System.Drawing.Color.Gold
-        Me.txttype.Location = New System.Drawing.Point(225, 394)
+        Me.txttype.Location = New System.Drawing.Point(225, 426)
         Me.txttype.Name = "txttype"
         Me.txttype.Size = New System.Drawing.Size(26, 29)
         Me.txttype.TabIndex = 67
@@ -403,7 +403,7 @@ Partial Class frm_makeorder_a174088
         Me.Label7.BackColor = System.Drawing.Color.Black
         Me.Label7.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Gold
-        Me.Label7.Location = New System.Drawing.Point(125, 394)
+        Me.Label7.Location = New System.Drawing.Point(125, 426)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(84, 29)
         Me.Label7.TabIndex = 66
@@ -416,7 +416,7 @@ Partial Class frm_makeorder_a174088
         Me.txtname.ForeColor = System.Drawing.Color.Gold
         Me.txtname.Location = New System.Drawing.Point(224, 274)
         Me.txtname.Name = "txtname"
-        Me.txtname.Size = New System.Drawing.Size(579, 29)
+        Me.txtname.Size = New System.Drawing.Size(579, 65)
         Me.txtname.TabIndex = 65
         Me.txtname.Text = "1"
         '
@@ -438,7 +438,7 @@ Partial Class frm_makeorder_a174088
         Me.txtbrand.BackColor = System.Drawing.Color.Black
         Me.txtbrand.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtbrand.ForeColor = System.Drawing.Color.Gold
-        Me.txtbrand.Location = New System.Drawing.Point(225, 352)
+        Me.txtbrand.Location = New System.Drawing.Point(225, 384)
         Me.txtbrand.Name = "txtbrand"
         Me.txtbrand.Size = New System.Drawing.Size(26, 29)
         Me.txtbrand.TabIndex = 63
@@ -450,7 +450,7 @@ Partial Class frm_makeorder_a174088
         Me.txtcolour.BackColor = System.Drawing.Color.Black
         Me.txtcolour.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtcolour.ForeColor = System.Drawing.Color.Gold
-        Me.txtcolour.Location = New System.Drawing.Point(224, 440)
+        Me.txtcolour.Location = New System.Drawing.Point(224, 472)
         Me.txtcolour.Name = "txtcolour"
         Me.txtcolour.Size = New System.Drawing.Size(26, 29)
         Me.txtcolour.TabIndex = 62
@@ -462,7 +462,7 @@ Partial Class frm_makeorder_a174088
         Me.txtprice.BackColor = System.Drawing.Color.Black
         Me.txtprice.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtprice.ForeColor = System.Drawing.Color.Gold
-        Me.txtprice.Location = New System.Drawing.Point(225, 312)
+        Me.txtprice.Location = New System.Drawing.Point(225, 344)
         Me.txtprice.Name = "txtprice"
         Me.txtprice.Size = New System.Drawing.Size(26, 29)
         Me.txtprice.TabIndex = 61
@@ -474,7 +474,7 @@ Partial Class frm_makeorder_a174088
         Me.Label9.BackColor = System.Drawing.Color.Black
         Me.Label9.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.Gold
-        Me.Label9.Location = New System.Drawing.Point(103, 440)
+        Me.Label9.Location = New System.Drawing.Point(103, 472)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(106, 29)
         Me.Label9.TabIndex = 59
@@ -486,7 +486,7 @@ Partial Class frm_makeorder_a174088
         Me.Label10.BackColor = System.Drawing.Color.Black
         Me.Label10.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.Gold
-        Me.Label10.Location = New System.Drawing.Point(120, 312)
+        Me.Label10.Location = New System.Drawing.Point(120, 344)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(89, 29)
         Me.Label10.TabIndex = 58
@@ -498,7 +498,7 @@ Partial Class frm_makeorder_a174088
         Me.Label11.BackColor = System.Drawing.Color.Black
         Me.Label11.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.Gold
-        Me.Label11.Location = New System.Drawing.Point(108, 352)
+        Me.Label11.Location = New System.Drawing.Point(108, 384)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(101, 29)
         Me.Label11.TabIndex = 57
