@@ -32,8 +32,9 @@
         'For Product
         cmb_productID.DataSource = run_sql_4_query("SELECT FLD_PRODUCT_ID FROM TBL_PRODUCT_A174088 ORDER BY FLD_PRODUCT_ID ASC")
         cmb_productID.DisplayMember = "FLD_PRODUCT_ID"
+
         ref_text(cmb_productID.Text)
-        'qty.Value = "1"
+
         tptemp.Text = 0
         'Cart
 
@@ -81,10 +82,13 @@
         myreader.Fill(mydatatable)
 
         txtname.Text = mydatatable.Rows(0).Item("FLD_PRODUCT_NAME")
-        txtprice.Text = "RM " & mydatatable.Rows(0).Item("FLD_PRICE")
+        txtprice.Text = mydatatable.Rows(0).Item("FLD_PRICE")
         txtbrand.Text = mydatatable.Rows(0).Item("FLD_BRAND")
         txttype.Text = mydatatable.Rows(0).Item("FLD_TYPE")
         txtcolour.Text = mydatatable.Rows(0).Item("FLD_COLOUR")
+
+        'qty.Text = "1"
+        tptemp.Text = qty.Text * txtprice.Text
 
 
         Try
@@ -162,7 +166,7 @@
             MsgBox("Transaction successful!")
             grd_cart.Rows.Clear()
 
-            ref_text(lblOrderID.Text)
+            ref_text(cmb_productID.Text)
         Catch ex As Exception
             Beep()
             MsgBox("Problem with transaction:" & vbCrLf & vbCrLf & ex.Message)

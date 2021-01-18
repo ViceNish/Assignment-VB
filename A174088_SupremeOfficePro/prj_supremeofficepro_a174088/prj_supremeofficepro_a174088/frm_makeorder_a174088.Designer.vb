@@ -67,6 +67,7 @@ Partial Class frm_makeorder_a174088
         Me.btn_checkout = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grp1.SuspendLayout()
@@ -288,6 +289,7 @@ Partial Class frm_makeorder_a174088
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox2.Controls.Add(Me.Label17)
         Me.GroupBox2.Controls.Add(Me.Label13)
         Me.GroupBox2.Controls.Add(Me.tptemp)
         Me.GroupBox2.Controls.Add(Me.Label15)
@@ -484,7 +486,7 @@ Partial Class frm_makeorder_a174088
         Me.txtprice.BackColor = System.Drawing.Color.Black
         Me.txtprice.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtprice.ForeColor = System.Drawing.Color.Gold
-        Me.txtprice.Location = New System.Drawing.Point(169, 280)
+        Me.txtprice.Location = New System.Drawing.Point(206, 280)
         Me.txtprice.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.txtprice.Name = "txtprice"
         Me.txtprice.Size = New System.Drawing.Size(20, 23)
@@ -654,6 +656,19 @@ Partial Class frm_makeorder_a174088
         Me.Label16.TabIndex = 73
         Me.Label16.Text = "RM"
         '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.BackColor = System.Drawing.Color.Black
+        Me.Label17.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.ForeColor = System.Drawing.Color.Gold
+        Me.Label17.Location = New System.Drawing.Point(169, 280)
+        Me.Label17.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(42, 23)
+        Me.Label17.TabIndex = 76
+        Me.Label17.Text = "RM"
+        '
         'frm_makeorder_a174088
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -737,4 +752,5 @@ Partial Class frm_makeorder_a174088
     Friend WithEvents Label15 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Label16 As Label
+    Friend WithEvents Label17 As Label
 End Class
