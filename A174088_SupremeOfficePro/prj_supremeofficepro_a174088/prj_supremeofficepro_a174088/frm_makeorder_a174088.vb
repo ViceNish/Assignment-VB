@@ -33,8 +33,8 @@
         cmb_productID.DataSource = run_sql_4_query("SELECT FLD_PRODUCT_ID FROM TBL_PRODUCT_A174088 ORDER BY FLD_PRODUCT_ID ASC")
         cmb_productID.DisplayMember = "FLD_PRODUCT_ID"
         ref_text(cmb_productID.Text)
-        qty.Value = "1"
-        tptemp.Text = txtprice.Text
+        'qty.Value = "1"
+        tptemp.Text = 0
         'Cart
 
 
@@ -58,7 +58,7 @@
         Dim myreader As New OleDb.OleDbDataAdapter(mysql, myconnection)
         myreader.Fill(mydatatable)
         count += mydatatable.Rows(0).Item("count_id")
-        lblID.Text = "P" + count.ToString("00")
+        lblOrderID.Text = "P" + count.ToString("00")
     End Sub
 
     Private Sub frm_makeorder_a174088_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
@@ -105,7 +105,7 @@
 
     Private Sub btn_addtocart_Click(sender As Object, e As EventArgs) Handles btn_addtocart.Click
         For Each row As DataGridViewRow In grd_cart.Rows
-            If (row.Cells(0).Value = lblID.Text And row.Cells(1).Value = cmb_productID.Text) Then
+            If (row.Cells(0).Value = lblOrderID.Text And row.Cells(1).Value = cmb_productID.Text) Then
                 row.Cells(2).Value = Val(row.Cells(2).Value) + qty.Text
                 row.Cells(3).Value = row.Cells(2).Value * txtprice.Text
                 totalprice.Text = Val(tptemp.Text) + Val(totalprice.Text)
@@ -114,7 +114,7 @@
 
             End If
         Next
-        grd_cart.Rows.Add(lblID.Text, cmb_productID.Text, qty.Text, tptemp.Text)
+        grd_cart.Rows.Add(lblOrderID.Text, cmb_productID.Text, qty.Text, tptemp.Text)
         totalprice.Text = Val(tptemp.Text) + Val(totalprice.Text)
     End Sub
 
@@ -122,6 +122,55 @@
     Private Sub qty_MouseDown(sender As Object, e As MouseEventArgs) Handles qty.MouseDown, qty.MouseUp, qty.MouseClick
         Dim quantity As Integer = qty.Text
         Dim price As Integer = txtprice.Text
-        tptemp.Text = "RM " & quantity * price
+        tptemp.Text = quantity * price
+    End Sub
+
+    Private Sub btn_remove_Click(sender As Object, e As EventArgs) Handles btn_remove.Click
+        Dim n As Integer = grd_cart.SelectedRows(0).Index
+        totalprice.Text = Val(totalprice.Text) - Val(grd_cart.Rows(n).Cells(3).Value)
+        grd_cart.Rows.RemoveAt(n)
+    End Sub
+
+    Private Sub btn_checkout_Click(sender As Object, e As EventArgs) Handles btn_checkout.Click
+        Dim transaction As OleDb.OleDbTransaction
+        myconnection2.Open()
+        transaction = myconnection2.BeginTransaction
+        Try
+            Dim orderid As String = lblOrderID.Text
+            Dim customerid As String = txt_custid.Text
+            Dim staffid As String = cmb_staffID.Text
+            Dim orderdate As String = DateTime.Now.ToString("dd MMMM yyyy, hh:mm dddd")
+
+            Dim mysql1 As String = "INSERT INTO TBL_ORDER_A174088 VALUES ('" & orderid & "', '" & customerid & "', '" & staffid & "', '" & orderdate & "')"
+            Dim mywriter1 As New OleDb.OleDbCommand(mysql1, myconnection2, transaction)
+            mywriter1.ExecuteNonQuery()
+
+            For i As Integer = 0 To grd_cart.RowCount - 1
+                Dim orderids As String = grd_cart(0, i).Value
+                Dim productids As String = grd_cart(1, i).Value
+                Dim qtys As String = grd_cart(2, i).Value
+                Dim prices As String = grd_cart(3, i).Value
+
+                Dim mysql2 As String = "INSERT INTO TBL_PURCHASE_A174088 VALUES ('" & orderids & "', '" & productids & "', '" & qtys & "', '" & prices & "')"
+                Dim mywriter2 As New OleDb.OleDbCommand(mysql2, myconnection2, transaction)
+                mywriter2.ExecuteNonQuery()
+            Next
+            transaction.Commit()
+            myconnection2.Close()
+
+            Beep()
+            MsgBox("Transaction successful!")
+            grd_cart.Rows.Clear()
+
+            ref_text(lblOrderID.Text)
+        Catch ex As Exception
+            Beep()
+            MsgBox("Problem with transaction:" & vbCrLf & vbCrLf & ex.Message)
+            transaction.Rollback()
+
+            myconnection2.Close()
+
+        End Try
+
     End Sub
 End Class
