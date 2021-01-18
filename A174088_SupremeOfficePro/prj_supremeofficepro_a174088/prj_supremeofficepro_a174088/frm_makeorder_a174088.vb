@@ -114,7 +114,7 @@
 
             End If
         Next
-        grd_cart.Rows.Add(lblID.Text, cmb_productID.Text, tptemp.Text)
+        grd_cart.Rows.Add(lblID.Text, cmb_productID.Text, qty.Text, tptemp.Text)
         totalprice.Text = Val(tptemp.Text) + Val(totalprice.Text)
     End Sub
 
