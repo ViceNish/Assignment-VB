@@ -35,7 +35,7 @@
 
         ref_text(cmb_productID.Text)
 
-        tptemp.Text = 0
+        'tptemp.Text = 0
         'Cart
 
 
@@ -88,6 +88,7 @@
         txtcolour.Text = mydatatable.Rows(0).Item("FLD_COLOUR")
 
         'qty.Text = "1"
+        qty.Value = 1
         tptemp.Text = qty.Text * txtprice.Text
 
 
