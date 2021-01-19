@@ -18,7 +18,7 @@
     End Sub
 
     Private Sub frm_makeorder_a174088_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.BackgroundImage = Image.FromFile("wallpaper/b2.jpg")
+        Me.BackgroundImage = Image.FromFile("wallpaper/b1.jpg")
         'For order ID
         GenerateID()
         'For Staff ID
@@ -46,7 +46,8 @@
 
         Next
 
-
+        cmb_staffID.Enabled = True
+        grd_customer.Enabled = True
 
 
 
@@ -121,14 +122,18 @@
         Next
         grd_cart.Rows.Add(lblOrderID.Text, cmb_productID.Text, qty.Text, tptemp.Text)
         totalprice.Text = Val(tptemp.Text) + Val(totalprice.Text)
+
+        cmb_staffID.Enabled = False
+        grd_customer.Enabled = False
     End Sub
 
 
-    Private Sub qty_MouseDown(sender As Object, e As MouseEventArgs) Handles qty.MouseDown, qty.MouseUp, qty.MouseClick
-        Dim quantity As Integer = qty.Text
-        Dim price As Integer = txtprice.Text
-        tptemp.Text = quantity * price
-    End Sub
+    'Private Sub qty_MouseDown(sender As Object, e As MouseEventArgs) Handles qty.MouseDown, qty.MouseUp, qty.MouseClick
+
+    '    Dim quantity As Integer = qty.Text
+    '    Dim price As Integer = txtprice.Text
+    '    tptemp.Text = quantity * price
+    'End Sub
     'Private Sub qty_MouseDown(sender As Object, e As MouseEventArgs) Handles qty.ValueChanged
     '    Dim quantity As Integer = qty.Text
     '    Dim price As Integer = txtprice.Text
@@ -136,53 +141,73 @@
     'End Sub
 
     Private Sub btn_remove_Click(sender As Object, e As EventArgs) Handles btn_remove.Click
-        Dim n As Integer = grd_cart.SelectedRows(0).Index
-        totalprice.Text = Val(totalprice.Text) - Val(grd_cart.Rows(n).Cells(3).Value)
-        grd_cart.Rows.RemoveAt(n)
-    End Sub
-
-    Private Sub btn_checkout_Click(sender As Object, e As EventArgs) Handles btn_checkout.Click
-        Dim transaction As OleDb.OleDbTransaction
-        myconnection2.Open()
-        transaction = myconnection2.BeginTransaction
         Try
-            Dim orderid As String = lblOrderID.Text
-            Dim customerid As String = txt_custid.Text
-            Dim staffid As String = cmb_staffID.Text
-            Dim orderdate As String = DateTime.Now.ToString("dd MMMM yyyy, hh:mm dddd")
-
-            Dim mysql1 As String = "INSERT INTO TBL_ORDER_A174088 VALUES ('" & orderid & "', '" & customerid & "', '" & staffid & "', '" & orderdate & "')"
-            Dim mywriter1 As New OleDb.OleDbCommand(mysql1, myconnection2, transaction)
-            mywriter1.ExecuteNonQuery()
-
-            For i As Integer = 0 To grd_cart.RowCount - 1
-                Dim orderids As String = grd_cart(0, i).Value
-                Dim productids As String = grd_cart(1, i).Value
-                Dim qtys As String = grd_cart(2, i).Value
-                Dim prices As String = grd_cart(3, i).Value
-
-                Dim mysql2 As String = "INSERT INTO TBL_PURCHASE_A174088 VALUES ('" & orderids & "', '" & productids & "', '" & qtys & "', '" & prices & "')"
-                Dim mywriter2 As New OleDb.OleDbCommand(mysql2, myconnection2, transaction)
-                mywriter2.ExecuteNonQuery()
-            Next
-            transaction.Commit()
-            myconnection2.Close()
-
-            Beep()
-            MsgBox("Transaction successful!")
-            grd_cart.Rows.Clear()
-
-            ref_text(cmb_productID.Text)
+            Dim n As Integer = grd_cart.SelectedRows(0).Index
+            totalprice.Text = Val(totalprice.Text) - Val(grd_cart.Rows(n).Cells(3).Value)
+            grd_cart.Rows.RemoveAt(n)
         Catch ex As Exception
-            Beep()
-            MsgBox("Problem with transaction:" & vbCrLf & vbCrLf & ex.Message)
-            transaction.Rollback()
-
-            myconnection2.Close()
 
         End Try
 
     End Sub
 
+    Private Sub btn_checkout_Click(sender As Object, e As EventArgs) Handles btn_checkout.Click
+        If (grd_cart.Rows.Count = 0) Then
+            MessageBox.Show("Please Add Item To Cart", "Check Out")
+        Else
+            Dim transaction As OleDb.OleDbTransaction
+            myconnection2.Open()
+            transaction = myconnection2.BeginTransaction
+            Try
+                Dim orderid As String = lblOrderID.Text
+                Dim customerid As String = txt_custid.Text
+                Dim staffid As String = cmb_staffID.Text
+                Dim orderdate As String = DateTime.Now.ToString("dd MMMM yyyy, hh:mm dddd")
 
+                Dim mysql1 As String = "INSERT INTO TBL_ORDER_A174088 VALUES ('" & orderid & "', '" & customerid & "', '" & staffid & "', '" & orderdate & "')"
+                Dim mywriter1 As New OleDb.OleDbCommand(mysql1, myconnection2, transaction)
+                mywriter1.ExecuteNonQuery()
+
+                For i As Integer = 0 To grd_cart.RowCount - 1
+                    Dim orderids As String = grd_cart(0, i).Value
+                    Dim productids As String = grd_cart(1, i).Value
+                    Dim qtys As String = grd_cart(2, i).Value
+                    Dim prices As String = grd_cart(3, i).Value
+
+                    Dim mysql2 As String = "INSERT INTO TBL_PURCHASE_A174088 VALUES ('" & orderids & "', '" & productids & "', '" & qtys & "', '" & prices & "')"
+                    Dim mywriter2 As New OleDb.OleDbCommand(mysql2, myconnection2, transaction)
+                    mywriter2.ExecuteNonQuery()
+                Next
+                transaction.Commit()
+                myconnection2.Close()
+
+                Beep()
+                MessageBox.Show("Transaction Successful!", "Check Out")
+                grd_cart.Rows.Clear()
+
+                ref_text(cmb_productID.Text)
+                GenerateID()
+
+                cmb_staffID.Enabled = True
+                grd_customer.Enabled = True
+
+            Catch ex As Exception
+                Beep()
+                MsgBox("Problem with transaction:" & vbCrLf & vbCrLf & ex.Message)
+                transaction.Rollback()
+
+                myconnection2.Close()
+
+            End Try
+        End If
+
+
+
+    End Sub
+
+    Private Sub qty_ValueChanged(sender As Object, e As EventArgs) Handles qty.ValueChanged, qty.MouseDown, qty.MouseUp, qty.MouseClick
+        Dim quantity As Integer = qty.Text
+        Dim price As Integer = txtprice.Text
+        tptemp.Text = quantity * price
+    End Sub
 End Class

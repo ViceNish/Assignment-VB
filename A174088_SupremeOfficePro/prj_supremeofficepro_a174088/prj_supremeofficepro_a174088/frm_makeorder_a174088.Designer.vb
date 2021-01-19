@@ -133,6 +133,7 @@ Partial Class frm_makeorder_a174088
         '
         'cmb_staffID
         '
+        Me.cmb_staffID.BackColor = System.Drawing.Color.White
         Me.cmb_staffID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmb_staffID.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmb_staffID.FormattingEnabled = True
@@ -183,7 +184,7 @@ Partial Class frm_makeorder_a174088
         '
         'GroupBox1
         '
-        Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox1.BackColor = System.Drawing.Color.Black
         Me.GroupBox1.Controls.Add(Me.txt_custdate)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.txt_custname)
@@ -204,6 +205,7 @@ Partial Class frm_makeorder_a174088
         '
         'txt_custdate
         '
+        Me.txt_custdate.BackColor = System.Drawing.Color.White
         Me.txt_custdate.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_custdate.Location = New System.Drawing.Point(272, 343)
         Me.txt_custdate.Margin = New System.Windows.Forms.Padding(4)
@@ -227,6 +229,7 @@ Partial Class frm_makeorder_a174088
         '
         'txt_custname
         '
+        Me.txt_custname.BackColor = System.Drawing.Color.White
         Me.txt_custname.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_custname.Location = New System.Drawing.Point(272, 306)
         Me.txt_custname.Margin = New System.Windows.Forms.Padding(4)
@@ -237,6 +240,7 @@ Partial Class frm_makeorder_a174088
         '
         'txt_custid
         '
+        Me.txt_custid.BackColor = System.Drawing.Color.White
         Me.txt_custid.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_custid.Location = New System.Drawing.Point(272, 270)
         Me.txt_custid.Margin = New System.Windows.Forms.Padding(4)
@@ -376,11 +380,11 @@ Partial Class frm_makeorder_a174088
         Me.Label15.BackColor = System.Drawing.Color.Black
         Me.Label15.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.Gold
-        Me.Label15.Location = New System.Drawing.Point(471, 469)
+        Me.Label15.Location = New System.Drawing.Point(491, 469)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(190, 29)
+        Me.Label15.Size = New System.Drawing.Size(176, 29)
         Me.Label15.TabIndex = 73
-        Me.Label15.Text = "Total Price : RM"
+        Me.Label15.Text = "Sub Total : RM"
         '
         'cmb_productID
         '
@@ -404,6 +408,7 @@ Partial Class frm_makeorder_a174088
         'btn_addtocart
         '
         Me.btn_addtocart.BackColor = System.Drawing.Color.Orange
+        Me.btn_addtocart.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_addtocart.Font = New System.Drawing.Font("Times New Roman", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_addtocart.ForeColor = System.Drawing.Color.Black
         Me.btn_addtocart.Location = New System.Drawing.Point(669, 500)
@@ -576,6 +581,7 @@ Partial Class frm_makeorder_a174088
         'btn_remove
         '
         Me.btn_remove.BackColor = System.Drawing.Color.OrangeRed
+        Me.btn_remove.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_remove.Font = New System.Drawing.Font("Times New Roman", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_remove.ForeColor = System.Drawing.Color.Black
         Me.btn_remove.Location = New System.Drawing.Point(553, 201)
@@ -630,6 +636,7 @@ Partial Class frm_makeorder_a174088
         'btn_checkout
         '
         Me.btn_checkout.BackColor = System.Drawing.Color.Gold
+        Me.btn_checkout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_checkout.Font = New System.Drawing.Font("Times New Roman", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_checkout.ForeColor = System.Drawing.Color.Black
         Me.btn_checkout.Location = New System.Drawing.Point(1251, 830)
