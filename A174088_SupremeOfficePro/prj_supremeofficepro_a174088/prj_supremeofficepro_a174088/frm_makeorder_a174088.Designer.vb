@@ -23,6 +23,8 @@ Partial Class frm_makeorder_a174088
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_makeorder_a174088))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lbl_title = New System.Windows.Forms.Label()
@@ -256,15 +258,23 @@ Partial Class frm_makeorder_a174088
         Me.grd_customer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.grd_customer.BackgroundColor = System.Drawing.Color.White
         Me.grd_customer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Times New Roman", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.grd_customer.DefaultCellStyle = DataGridViewCellStyle1
         Me.grd_customer.GridColor = System.Drawing.Color.Black
-        Me.grd_customer.Location = New System.Drawing.Point(29, 38)
+        Me.grd_customer.Location = New System.Drawing.Point(17, 34)
         Me.grd_customer.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.grd_customer.Name = "grd_customer"
         Me.grd_customer.ReadOnly = True
         Me.grd_customer.RowHeadersWidth = 51
         Me.grd_customer.RowTemplate.Height = 24
         Me.grd_customer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.grd_customer.Size = New System.Drawing.Size(579, 185)
+        Me.grd_customer.Size = New System.Drawing.Size(602, 185)
         Me.grd_customer.TabIndex = 40
         '
         'Label2
@@ -599,6 +609,14 @@ Partial Class frm_makeorder_a174088
         Me.grd_cart.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.grd_cart.BackgroundColor = System.Drawing.Color.White
         Me.grd_cart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Times New Roman", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.grd_cart.DefaultCellStyle = DataGridViewCellStyle2
         Me.grd_cart.Location = New System.Drawing.Point(29, 34)
         Me.grd_cart.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.grd_cart.Name = "grd_cart"
