@@ -129,6 +129,11 @@
         Dim price As Integer = txtprice.Text
         tptemp.Text = quantity * price
     End Sub
+    'Private Sub qty_MouseDown(sender As Object, e As MouseEventArgs) Handles qty.ValueChanged
+    '    Dim quantity As Integer = qty.Text
+    '    Dim price As Integer = txtprice.Text
+    '    tptemp.Text = quantity * price
+    'End Sub
 
     Private Sub btn_remove_Click(sender As Object, e As EventArgs) Handles btn_remove.Click
         Dim n As Integer = grd_cart.SelectedRows(0).Index
@@ -178,4 +183,6 @@
         End Try
 
     End Sub
+
+
 End Class
