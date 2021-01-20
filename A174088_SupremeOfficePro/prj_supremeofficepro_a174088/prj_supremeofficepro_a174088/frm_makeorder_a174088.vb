@@ -146,7 +146,7 @@
             totalprice.Text = Val(totalprice.Text) - Val(grd_cart.Rows(n).Cells(3).Value)
             grd_cart.Rows.RemoveAt(n)
         Catch ex As Exception
-
+            MessageBox.Show("Cart Box Is Empty", "On Cart")
         End Try
 
     End Sub

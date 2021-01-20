@@ -108,7 +108,7 @@
     End Sub
 
     Private Sub Timer5_Tick(sender As Object, e As EventArgs) Handles Timer5.Tick
-        pnl_purchase.Width = 171
+        pnl_purchase.Width = 358
         Timer5.Stop()
     End Sub
 
@@ -150,5 +150,10 @@
 
     Private Sub btn_makeorder_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
         frm_makeorder_a174088.ShowDialog()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        frm_vieworder_a174088.ShowDialog()
+
     End Sub
 End Class

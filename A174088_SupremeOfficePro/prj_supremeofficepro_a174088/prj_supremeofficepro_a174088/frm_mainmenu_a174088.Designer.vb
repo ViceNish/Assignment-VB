@@ -63,6 +63,7 @@ Partial Class frm_mainmenu_a174088
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.lbl_timedate = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnl_product.SuspendLayout()
         Me.pnl_customer.SuspendLayout()
@@ -374,11 +375,12 @@ Partial Class frm_mainmenu_a174088
         'pnl_purchase
         '
         Me.pnl_purchase.BackColor = System.Drawing.Color.Transparent
+        Me.pnl_purchase.Controls.Add(Me.Button2)
         Me.pnl_purchase.Controls.Add(Me.btn_purlist)
         Me.pnl_purchase.Location = New System.Drawing.Point(1103, 647)
         Me.pnl_purchase.Margin = New System.Windows.Forms.Padding(4)
         Me.pnl_purchase.Name = "pnl_purchase"
-        Me.pnl_purchase.Size = New System.Drawing.Size(0, 57)
+        Me.pnl_purchase.Size = New System.Drawing.Size(0, 71)
         Me.pnl_purchase.TabIndex = 14
         '
         'btn_purlist
@@ -520,6 +522,19 @@ Partial Class frm_mainmenu_a174088
         Me.lbl_timedate.TabIndex = 23
         Me.lbl_timedate.Text = "Timedate"
         '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.Yellow
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button2.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(177, 0)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(180, 57)
+        Me.Button2.TabIndex = 11
+        Me.Button2.Text = "View Order"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
         'frm_mainmenu_a174088
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -601,4 +616,5 @@ Partial Class frm_mainmenu_a174088
     Friend WithEvents Label8 As Label
     Friend WithEvents lbl_timedate As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
 End Class

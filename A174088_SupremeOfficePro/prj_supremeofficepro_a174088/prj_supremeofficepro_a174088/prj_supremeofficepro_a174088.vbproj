@@ -179,6 +179,12 @@
     <Compile Include="frm_stafflist_a174088.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frm_vieworder_a174088.Designer.vb">
+      <DependentUpon>frm_vieworder_a174088.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_vieworder_a174088.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="mod_globals_a174088.vb" />
     <Compile Include="mod_text_box_format_a174088.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -240,6 +246,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_stafflist_a174088.resx">
       <DependentUpon>frm_stafflist_a174088.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_vieworder_a174088.resx">
+      <DependentUpon>frm_vieworder_a174088.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
