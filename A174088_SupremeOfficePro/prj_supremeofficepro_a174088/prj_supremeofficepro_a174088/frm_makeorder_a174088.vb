@@ -24,6 +24,7 @@
         'For Staff ID
         cmb_staffID.DataSource = run_sql_4_query("SELECT FLD_STAFF_ID FROM TBL_STAFF_A174088 ORDER BY FLD_STAFF_ID ASC")
         cmb_staffID.DisplayMember = "FLD_STAFF_ID"
+        ref_staff(cmb_staffID.Text)
         'For Customer
         grd_customer.DataSource = run_sql_4_query("SELECT FLD_CUSTOMER_ID, FLD_CUSTOMER_NAME FROM TBL_CUSTOMER_A174088")
         grd_customer.Sort(grd_customer.Columns(0), System.ComponentModel.ListSortDirection.Ascending)
@@ -75,6 +76,15 @@
             txt_custname.Text = row.Cells(1).Value.ToString
 
         End If
+    End Sub
+
+    Private Sub ref_staff(ID As String)
+        Dim mysql As String = "SELECT * FROM TBL_STAFF_A174088 WHERE FLD_STAFF_ID = '" & ID & "'"
+        Dim mydatatable As New DataTable
+        Dim myreader As New OleDb.OleDbDataAdapter(mysql, myconnection)
+        myreader.Fill(mydatatable)
+
+        txt_staffname.Text = mydatatable.Rows(0).Item("FLD_STAFF_NAME")
     End Sub
     Private Sub ref_text(product As String)
         Dim mysql As String = "SELECT * FROM TBL_PRODUCT_A174088 WHERE FLD_PRODUCT_ID = '" & product & "'"
@@ -152,56 +162,56 @@
     End Sub
 
     Private Sub btn_checkout_Click(sender As Object, e As EventArgs) Handles btn_checkout.Click
-        If (grd_cart.Rows.Count = 0) Then
-            MessageBox.Show("Please Add Item To Cart", "Check Out")
-        Else
-            Dim transaction As OleDb.OleDbTransaction
-            myconnection2.Open()
-            transaction = myconnection2.BeginTransaction
-            Try
-                Dim orderid As String = lblOrderID.Text
-                Dim customerid As String = txt_custid.Text
-                Dim staffid As String = cmb_staffID.Text
-                Dim orderdate As String = DateTime.Now.ToString("dd MMMM yyyy, hh:mm dddd")
+        If MsgBox("Are you sure want to Check Out?", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
+            If (grd_cart.Rows.Count = 0) Then
+                MessageBox.Show("Please Add Item To Cart", "Check Out")
+            Else
+                Dim transaction As OleDb.OleDbTransaction
+                myconnection2.Open()
+                transaction = myconnection2.BeginTransaction
+                Try
+                    Dim orderid As String = lblOrderID.Text
+                    Dim customerid As String = txt_custid.Text
+                    Dim staffid As String = cmb_staffID.Text
+                    Dim orderdate As String = DateTime.Now.ToString("dd MMMM yyyy, hh:mm dddd")
 
-                Dim mysql1 As String = "INSERT INTO TBL_ORDER_A174088 VALUES ('" & orderid & "', '" & customerid & "', '" & staffid & "', '" & orderdate & "')"
-                Dim mywriter1 As New OleDb.OleDbCommand(mysql1, myconnection2, transaction)
-                mywriter1.ExecuteNonQuery()
+                    Dim mysql1 As String = "INSERT INTO TBL_ORDER_A174088 VALUES ('" & orderid & "', '" & customerid & "', '" & staffid & "', '" & orderdate & "')"
+                    Dim mywriter1 As New OleDb.OleDbCommand(mysql1, myconnection2, transaction)
+                    mywriter1.ExecuteNonQuery()
 
-                For i As Integer = 0 To grd_cart.RowCount - 1
-                    Dim orderids As String = grd_cart(0, i).Value
-                    Dim productids As String = grd_cart(1, i).Value
-                    Dim qtys As String = grd_cart(2, i).Value
-                    Dim prices As String = grd_cart(3, i).Value
+                    For i As Integer = 0 To grd_cart.RowCount - 1
+                        Dim orderids As String = grd_cart(0, i).Value
+                        Dim productids As String = grd_cart(1, i).Value
+                        Dim qtys As String = grd_cart(2, i).Value
+                        Dim prices As String = grd_cart(3, i).Value
 
-                    Dim mysql2 As String = "INSERT INTO TBL_PURCHASE_A174088 VALUES ('" & orderids & "', '" & productids & "', '" & qtys & "', '" & prices & "')"
-                    Dim mywriter2 As New OleDb.OleDbCommand(mysql2, myconnection2, transaction)
-                    mywriter2.ExecuteNonQuery()
-                Next
-                transaction.Commit()
-                myconnection2.Close()
+                        Dim mysql2 As String = "INSERT INTO TBL_PURCHASE_A174088 VALUES ('" & orderids & "', '" & productids & "', '" & qtys & "', '" & prices & "')"
+                        Dim mywriter2 As New OleDb.OleDbCommand(mysql2, myconnection2, transaction)
+                        mywriter2.ExecuteNonQuery()
+                    Next
+                    transaction.Commit()
+                    myconnection2.Close()
 
-                Beep()
-                MessageBox.Show("Transaction Successful!", "Check Out")
-                grd_cart.Rows.Clear()
+                    Beep()
+                    MessageBox.Show("Transaction Successful!", "Check Out")
+                    grd_cart.Rows.Clear()
 
-                ref_text(cmb_productID.Text)
-                GenerateID()
+                    ref_text(cmb_productID.Text)
+                    GenerateID()
 
-                cmb_staffID.Enabled = True
-                grd_customer.Enabled = True
+                    cmb_staffID.Enabled = True
+                    grd_customer.Enabled = True
 
-            Catch ex As Exception
-                Beep()
-                MsgBox("Problem with transaction:" & vbCrLf & vbCrLf & ex.Message)
-                transaction.Rollback()
+                Catch ex As Exception
+                    Beep()
+                    MsgBox("Problem with transaction:" & vbCrLf & vbCrLf & ex.Message)
+                    transaction.Rollback()
 
-                myconnection2.Close()
+                    myconnection2.Close()
 
-            End Try
+                End Try
+            End If
         End If
-
-
 
     End Sub
 
@@ -209,5 +219,13 @@
         Dim quantity As Integer = qty.Text
         Dim price As Integer = txtprice.Text
         tptemp.Text = quantity * price
+    End Sub
+
+    Private Sub cmb_staffID_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_staffID.SelectedIndexChanged
+        Try
+            ref_staff(cmb_staffID.Text)
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class

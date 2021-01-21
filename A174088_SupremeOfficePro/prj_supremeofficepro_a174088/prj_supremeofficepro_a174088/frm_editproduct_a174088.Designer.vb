@@ -55,10 +55,9 @@ Partial Class frm_editproduct_a174088
         Me.PictureBox1.BackColor = System.Drawing.Color.Black
         Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(4, 4)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(263, 82)
+        Me.PictureBox1.Size = New System.Drawing.Size(197, 67)
         Me.PictureBox1.TabIndex = 28
         Me.PictureBox1.TabStop = False
         '
@@ -68,9 +67,10 @@ Partial Class frm_editproduct_a174088
         Me.lbl_title.BackColor = System.Drawing.Color.Black
         Me.lbl_title.Font = New System.Drawing.Font("Times New Roman", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_title.ForeColor = System.Drawing.Color.Gold
-        Me.lbl_title.Location = New System.Drawing.Point(845, 42)
+        Me.lbl_title.Location = New System.Drawing.Point(634, 34)
+        Me.lbl_title.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_title.Name = "lbl_title"
-        Me.lbl_title.Size = New System.Drawing.Size(327, 45)
+        Me.lbl_title.Size = New System.Drawing.Size(256, 36)
         Me.lbl_title.TabIndex = 29
         Me.lbl_title.Text = "EDIT PRODUCT"
         '
@@ -81,13 +81,13 @@ Partial Class frm_editproduct_a174088
         Me.grd_product.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.grd_product.BackgroundColor = System.Drawing.Color.White
         Me.grd_product.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.grd_product.Location = New System.Drawing.Point(809, 128)
-        Me.grd_product.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.grd_product.Location = New System.Drawing.Point(607, 104)
+        Me.grd_product.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.grd_product.Name = "grd_product"
         Me.grd_product.ReadOnly = True
         Me.grd_product.RowHeadersWidth = 51
         Me.grd_product.RowTemplate.Height = 24
-        Me.grd_product.Size = New System.Drawing.Size(1176, 625)
+        Me.grd_product.Size = New System.Drawing.Size(882, 508)
         Me.grd_product.TabIndex = 30
         '
         'cmb_type
@@ -95,10 +95,9 @@ Partial Class frm_editproduct_a174088
         Me.cmb_type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmb_type.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmb_type.FormattingEnabled = True
-        Me.cmb_type.Location = New System.Drawing.Point(311, 438)
-        Me.cmb_type.Margin = New System.Windows.Forms.Padding(4)
+        Me.cmb_type.Location = New System.Drawing.Point(233, 356)
         Me.cmb_type.Name = "cmb_type"
-        Me.cmb_type.Size = New System.Drawing.Size(280, 29)
+        Me.cmb_type.Size = New System.Drawing.Size(211, 25)
         Me.cmb_type.TabIndex = 45
         '
         'Label8
@@ -107,10 +106,9 @@ Partial Class frm_editproduct_a174088
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Gold
-        Me.Label8.Location = New System.Drawing.Point(124, 441)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Location = New System.Drawing.Point(93, 358)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(170, 29)
+        Me.Label8.Size = New System.Drawing.Size(135, 23)
         Me.Label8.TabIndex = 44
         Me.Label8.Text = "Product Type :"
         '
@@ -120,20 +118,18 @@ Partial Class frm_editproduct_a174088
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Gold
-        Me.Label7.Location = New System.Drawing.Point(304, 293)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(228, 238)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(52, 26)
+        Me.Label7.Size = New System.Drawing.Size(42, 22)
         Me.Label7.TabIndex = 43
         Me.Label7.Text = "RM"
         '
         'txt_color
         '
         Me.txt_color.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_color.Location = New System.Drawing.Point(309, 581)
-        Me.txt_color.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_color.Location = New System.Drawing.Point(232, 472)
         Me.txt_color.Name = "txt_color"
-        Me.txt_color.Size = New System.Drawing.Size(437, 29)
+        Me.txt_color.Size = New System.Drawing.Size(329, 25)
         Me.txt_color.TabIndex = 42
         '
         'Label6
@@ -142,20 +138,18 @@ Partial Class frm_editproduct_a174088
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Gold
-        Me.Label6.Location = New System.Drawing.Point(103, 583)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(77, 474)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(192, 29)
+        Me.Label6.Size = New System.Drawing.Size(150, 23)
         Me.Label6.TabIndex = 41
         Me.Label6.Text = "Product Colour :"
         '
         'txt_qty
         '
         Me.txt_qty.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_qty.Location = New System.Drawing.Point(311, 503)
-        Me.txt_qty.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_qty.Location = New System.Drawing.Point(233, 409)
         Me.txt_qty.Name = "txt_qty"
-        Me.txt_qty.Size = New System.Drawing.Size(436, 29)
+        Me.txt_qty.Size = New System.Drawing.Size(328, 25)
         Me.txt_qty.TabIndex = 40
         '
         'Label5
@@ -164,20 +158,18 @@ Partial Class frm_editproduct_a174088
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Gold
-        Me.Label5.Location = New System.Drawing.Point(79, 506)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(59, 411)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(214, 29)
+        Me.Label5.Size = New System.Drawing.Size(168, 23)
         Me.Label5.TabIndex = 39
         Me.Label5.Text = "Product Quantity :"
         '
         'txt_brand
         '
         Me.txt_brand.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_brand.Location = New System.Drawing.Point(311, 361)
-        Me.txt_brand.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_brand.Location = New System.Drawing.Point(233, 293)
         Me.txt_brand.Name = "txt_brand"
-        Me.txt_brand.Size = New System.Drawing.Size(436, 29)
+        Me.txt_brand.Size = New System.Drawing.Size(328, 25)
         Me.txt_brand.TabIndex = 38
         '
         'Label4
@@ -186,20 +178,18 @@ Partial Class frm_editproduct_a174088
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Gold
-        Me.Label4.Location = New System.Drawing.Point(111, 363)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(83, 295)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(187, 29)
+        Me.Label4.Size = New System.Drawing.Size(144, 23)
         Me.Label4.TabIndex = 37
         Me.Label4.Text = "Product Brand :"
         '
         'txt_price
         '
         Me.txt_price.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_price.Location = New System.Drawing.Point(368, 289)
-        Me.txt_price.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_price.Location = New System.Drawing.Point(276, 235)
         Me.txt_price.Name = "txt_price"
-        Me.txt_price.Size = New System.Drawing.Size(221, 29)
+        Me.txt_price.Size = New System.Drawing.Size(167, 25)
         Me.txt_price.TabIndex = 36
         '
         'Label3
@@ -208,20 +198,18 @@ Partial Class frm_editproduct_a174088
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Gold
-        Me.Label3.Location = New System.Drawing.Point(120, 292)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(90, 237)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(175, 29)
+        Me.Label3.Size = New System.Drawing.Size(137, 23)
         Me.Label3.TabIndex = 35
         Me.Label3.Text = "Product Price :"
         '
         'txt_name
         '
         Me.txt_name.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_name.Location = New System.Drawing.Point(309, 222)
-        Me.txt_name.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_name.Location = New System.Drawing.Point(232, 180)
         Me.txt_name.Name = "txt_name"
-        Me.txt_name.Size = New System.Drawing.Size(436, 29)
+        Me.txt_name.Size = New System.Drawing.Size(328, 25)
         Me.txt_name.TabIndex = 34
         '
         'Label2
@@ -230,21 +218,19 @@ Partial Class frm_editproduct_a174088
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Gold
-        Me.Label2.Location = New System.Drawing.Point(112, 222)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(84, 180)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(181, 29)
+        Me.Label2.Size = New System.Drawing.Size(142, 23)
         Me.Label2.TabIndex = 33
         Me.Label2.Text = "Product Name :"
         '
         'txt_id
         '
         Me.txt_id.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_id.Location = New System.Drawing.Point(311, 153)
-        Me.txt_id.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_id.Location = New System.Drawing.Point(233, 124)
         Me.txt_id.Name = "txt_id"
         Me.txt_id.ReadOnly = True
-        Me.txt_id.Size = New System.Drawing.Size(436, 29)
+        Me.txt_id.Size = New System.Drawing.Size(328, 25)
         Me.txt_id.TabIndex = 32
         '
         'Label1
@@ -253,10 +239,9 @@ Partial Class frm_editproduct_a174088
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Gold
-        Me.Label1.Location = New System.Drawing.Point(151, 155)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(113, 126)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(147, 29)
+        Me.Label1.Size = New System.Drawing.Size(114, 23)
         Me.Label1.TabIndex = 31
         Me.Label1.Text = "Product ID :"
         '
@@ -264,10 +249,10 @@ Partial Class frm_editproduct_a174088
         '
         Me.btn_back.BackColor = System.Drawing.Color.Gold
         Me.btn_back.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_back.Location = New System.Drawing.Point(40, 785)
-        Me.btn_back.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btn_back.Location = New System.Drawing.Point(30, 638)
+        Me.btn_back.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btn_back.Name = "btn_back"
-        Me.btn_back.Size = New System.Drawing.Size(120, 49)
+        Me.btn_back.Size = New System.Drawing.Size(90, 40)
         Me.btn_back.TabIndex = 46
         Me.btn_back.Text = "< Back"
         Me.btn_back.UseVisualStyleBackColor = False
@@ -276,10 +261,10 @@ Partial Class frm_editproduct_a174088
         '
         Me.btn_update.BackColor = System.Drawing.Color.Gold
         Me.btn_update.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_update.Location = New System.Drawing.Point(108, 676)
-        Me.btn_update.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btn_update.Location = New System.Drawing.Point(81, 549)
+        Me.btn_update.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btn_update.Name = "btn_update"
-        Me.btn_update.Size = New System.Drawing.Size(289, 78)
+        Me.btn_update.Size = New System.Drawing.Size(217, 63)
         Me.btn_update.TabIndex = 47
         Me.btn_update.Text = "Update Product"
         Me.btn_update.UseVisualStyleBackColor = False
@@ -288,10 +273,10 @@ Partial Class frm_editproduct_a174088
         '
         Me.btn_delete.BackColor = System.Drawing.Color.Gold
         Me.btn_delete.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_delete.Location = New System.Drawing.Point(475, 676)
-        Me.btn_delete.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btn_delete.Location = New System.Drawing.Point(356, 549)
+        Me.btn_delete.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btn_delete.Name = "btn_delete"
-        Me.btn_delete.Size = New System.Drawing.Size(272, 78)
+        Me.btn_delete.Size = New System.Drawing.Size(204, 63)
         Me.btn_delete.TabIndex = 48
         Me.btn_delete.Text = "Delete Product"
         Me.btn_delete.UseVisualStyleBackColor = False
@@ -300,17 +285,18 @@ Partial Class frm_editproduct_a174088
         '
         Me.Panel1.BackColor = System.Drawing.Color.Black
         Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Location = New System.Drawing.Point(58, 27)
+        Me.Panel1.Location = New System.Drawing.Point(44, 22)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(272, 91)
+        Me.Panel1.Size = New System.Drawing.Size(204, 74)
         Me.Panel1.TabIndex = 49
         '
         'frm_editproduct_a174088
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(2032, 882)
+        Me.ClientSize = New System.Drawing.Size(1443, 717)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.btn_delete)
         Me.Controls.Add(Me.btn_update)
@@ -333,8 +319,9 @@ Partial Class frm_editproduct_a174088
         Me.Controls.Add(Me.grd_product)
         Me.Controls.Add(Me.lbl_title)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.MaximizeBox = False
         Me.Name = "frm_editproduct_a174088"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frm_editproduct_a174088"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.grd_product, System.ComponentModel.ISupportInitialize).EndInit()

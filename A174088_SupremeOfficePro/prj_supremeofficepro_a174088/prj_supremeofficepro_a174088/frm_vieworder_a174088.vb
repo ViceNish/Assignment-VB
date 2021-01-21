@@ -99,24 +99,40 @@
 
     End Sub
 
-    Private Sub PrintDocument1_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
-        e.Graphics.DrawImage(bitmap, 0, 0)
-        PrintDocument1.PrinterSettings.PrinterName = "Microsoft Print to PDF"
-        ' PrintDocument1.PrinterSettings.PrintFileName = "ali.pdf"
-    End Sub
+    'Private Sub PrintDocument1_PrintPage(sender As Object, e As Printing.PrintPageEventArgs)
+    '    e.Graphics.DrawImage(bitmap, 0, 0)
+    '    PrintDocument1.PrinterSettings.PrinterName = "Microsoft Print to PDF"
+    '    '' PrintDocument1.PrinterSettings.PrintFileName = "ali.pdf"
 
-    Private Sub print_order_Click(sender As Object, e As EventArgs) Handles print_order.Click
-        'Dim graphic As Graphics
-        'bitmap = New Bitmap(Me.Width, Me.Height)
-        'graphic = Graphics.FromImage(bitmap)
-        'graphic.CopyFromScreen(Me.Location.X, Me.Location.Y, 0, 0, bitmap.Size)
-        'PrintDocument1.DefaultPageSettings.Landscape = True
-        'PrintDocument1.DefaultPageSettings.PaperSize = New System.Drawing.Printing.PaperSize("custom", Me.Width + 100, Me.Height - 60)
+    '    'Dim bitmap As New Bitmap(Me.Panel2.Width, Me.Panel2.Height)
+    '    'Panel2.DrawToBitmap(bitmap, New Rectangle(0, 0, Me.Panel2.Width, Me.Panel2.Height))
+    '    'e.Graphics.DrawImage(bitmap, 0, 0)
+
+    '    'Dim PS As New PageSetupDialog
+    '    'PS.Document = PrintDocument1
+    '    'PS.PrinterSettings.DefaultPageSettings.Landscape = True
+    '    'P
+
+    'End Sub
+
+    'Private Sub print_order_Click(sender As Object, e As EventArgs) Handles print_order.Click
+    '    Dim graphic As Graphics
+    '    bitmap = New Bitmap(Me.Width, Me.Height)
+    '    graphic = Graphics.FromImage(bitmap)
+    '    graphic.CopyFromScreen(Me.Location.X, Me.Location.Y, 50, 166, bitmap.Size)
+    '    'PrintDocument1.DefaultPageSettings.Landscape = True
+    '    'PrintDocument1.DefaultPageSettings.PaperSize = New System.Drawing.Printing.PaperSize("custom", Me.Panel2.Width, Me.Panel2.Height)
+
+    '    'Me.PrintDocument1.Print()
+    '    '  PrintDocument1.PrinterSettings.PrinterName = My.Settings.printer
+    '    PageSetupDialog1.Document = PrintDocument1
+    '    PageSetupDialog1.PrinterSettings.DefaultPageSettings.Landscape = True
+    '    PrintForm1.PrinterSettings = PageSetupDialog1.PrinterSettings
+    '    If PrintForm1.PrinterSettings.IsValid Then
+    '        PrintForm1.Print()
+    '    End If
 
 
-        'Me.PrintDocument1.Pr
-        'Me.PrintDocument1.Print()
 
-        Me.PrintPreviewDialog1.Prin
-    End Sub
+    'End Sub
 End Class
