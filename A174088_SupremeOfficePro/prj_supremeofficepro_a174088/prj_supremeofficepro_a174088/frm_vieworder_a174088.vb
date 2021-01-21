@@ -20,8 +20,6 @@
         cmb_OrderID.DisplayMember = "FLD_ORDER_ID"
         ref_invoice(cmb_OrderID.Text)
 
-        'AddHandler cmb_OrderID.SelectedIndexChanged, AddressOf ref_details
-
     End Sub
 
 
@@ -94,7 +92,6 @@
         Catch ex As Exception
 
         End Try
-        ' ref_invoice(cmb_OrderID.Text)
     End Sub
 
     Private Sub frm_vieworder_a174088_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
@@ -109,13 +106,17 @@
     End Sub
 
     Private Sub print_order_Click(sender As Object, e As EventArgs) Handles print_order.Click
-        Dim graphic As Graphics
-        bitmap = New Bitmap(Me.Width, Me.Height - 60)
-        graphic = Graphics.FromImage(bitmap)
-        graphic.CopyFromScreen(Me.Location.X - 58, Me.Location.Y - 197, 0, 0, bitmap.Size)
-        PrintDocument1.DefaultPageSettings.Landscape = True
-        PrintDocument1.DefaultPageSettings.PaperSize = New System.Drawing.Printing.PaperSize("custom", Me.Width, Me.Height)
+        'Dim graphic As Graphics
+        'bitmap = New Bitmap(Me.Width, Me.Height)
+        'graphic = Graphics.FromImage(bitmap)
+        'graphic.CopyFromScreen(Me.Location.X, Me.Location.Y, 0, 0, bitmap.Size)
+        'PrintDocument1.DefaultPageSettings.Landscape = True
+        'PrintDocument1.DefaultPageSettings.PaperSize = New System.Drawing.Printing.PaperSize("custom", Me.Width + 100, Me.Height - 60)
 
-        PrintDocument1.Print()
+
+        'Me.PrintDocument1.Pr
+        'Me.PrintDocument1.Print()
+
+        Me.PrintPreviewDialog1.Prin
     End Sub
 End Class
