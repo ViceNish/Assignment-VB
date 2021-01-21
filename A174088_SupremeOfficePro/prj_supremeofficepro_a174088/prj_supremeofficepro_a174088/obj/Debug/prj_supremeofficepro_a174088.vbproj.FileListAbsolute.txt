@@ -90,3 +90,4 @@ C:\Users\danis\Documents\GitHub\Assignment-VB\A174088_SupremeOfficePro\prj_supre
 C:\Users\danis\Documents\GitHub\Assignment-VB\A174088_SupremeOfficePro\prj_supremeofficepro_a174088\prj_supremeofficepro_a174088\obj\Debug\prj_supremeofficepro_a174088.xml
 C:\Users\danis\Documents\GitHub\Assignment-VB\A174088_SupremeOfficePro\prj_supremeofficepro_a174088\prj_supremeofficepro_a174088\obj\Debug\prj_supremeofficepro_a174088.pdb
 C:\Users\danis\Documents\GitHub\Assignment-VB\A174088_SupremeOfficePro\prj_supremeofficepro_a174088\prj_supremeofficepro_a174088\obj\Debug\prj_supremeofficepro_a174088.frm_vieworder_a174088.resources
+C:\Users\danis\Documents\GitHub\Assignment-VB\A174088_SupremeOfficePro\prj_supremeofficepro_a174088\prj_supremeofficepro_a174088\obj\Debug\prj_supremeofficepro_a174088.frm_splashscreen_a174088.resources

@@ -18,7 +18,7 @@
     End Sub
 
     Private Sub frm_makeorder_a174088_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.BackgroundImage = Image.FromFile("wallpaper/b1.jpg")
+        Me.BackgroundImage = Image.FromFile("wallpaper/b99.jpg")
         'For order ID
         GenerateID()
         'For Staff ID

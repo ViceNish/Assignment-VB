@@ -94,6 +94,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
     <Compile Include="frm_addcustomer_a174088.Designer.vb">
       <DependentUpon>frm_addcustomer_a174088.vb</DependentUpon>
     </Compile>
@@ -173,6 +174,12 @@
     <Compile Include="frm_purchaselist_a174088.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frm_splashscreen_a174088.Designer.vb">
+      <DependentUpon>frm_splashscreen_a174088.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_splashscreen_a174088.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frm_stafflist_a174088.Designer.vb">
       <DependentUpon>frm_stafflist_a174088.vb</DependentUpon>
     </Compile>
@@ -243,6 +250,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_purchaselist_a174088.resx">
       <DependentUpon>frm_purchaselist_a174088.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_splashscreen_a174088.resx">
+      <DependentUpon>frm_splashscreen_a174088.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_stafflist_a174088.resx">
       <DependentUpon>frm_stafflist_a174088.vb</DependentUpon>
