@@ -43,7 +43,6 @@ Partial Class frm_vieworder_a174088
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lbl_qty = New System.Windows.Forms.Label()
-        Me.lbl_product = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -51,7 +50,6 @@ Partial Class frm_vieworder_a174088
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.lbl_unit = New System.Windows.Forms.Label()
-        Me.lblSubTotal = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lblOrderID = New System.Windows.Forms.Label()
@@ -60,6 +58,8 @@ Partial Class frm_vieworder_a174088
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.lbl_product = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -277,11 +277,12 @@ Partial Class frm_vieworder_a174088
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.58205!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.41795!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 151.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 165.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 167.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.Label7, 3, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.lbl_product, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label5, 0, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.Label3, 0, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.lbl_qty, 1, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.lbl_product, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label8, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label10, 2, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label9, 1, 0)
@@ -289,13 +290,12 @@ Partial Class frm_vieworder_a174088
         Me.TableLayoutPanel1.Controls.Add(Me.Label18, 2, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.Label11, 3, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.lbl_unit, 2, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.lblSubTotal, 3, 1)
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(44, 215)
         Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 3
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.34375!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 72.65625!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45.0!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(947, 275)
         Me.TableLayoutPanel1.TabIndex = 65
@@ -309,10 +309,10 @@ Partial Class frm_vieworder_a174088
         Me.Label5.BackColor = System.Drawing.Color.Gainsboro
         Me.Label5.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(514, 228)
+        Me.Label5.Location = New System.Drawing.Point(3, 229)
         Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(111, 46)
+        Me.Label5.Size = New System.Drawing.Size(505, 45)
         Me.Label5.TabIndex = 77
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -325,10 +325,10 @@ Partial Class frm_vieworder_a174088
         Me.Label3.BackColor = System.Drawing.Color.Gainsboro
         Me.Label3.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(3, 228)
+        Me.Label3.Location = New System.Drawing.Point(513, 229)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(506, 46)
+        Me.Label3.Size = New System.Drawing.Size(110, 45)
         Me.Label3.TabIndex = 76
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -341,30 +341,13 @@ Partial Class frm_vieworder_a174088
         Me.lbl_qty.BackColor = System.Drawing.Color.Gainsboro
         Me.lbl_qty.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_qty.ForeColor = System.Drawing.Color.Black
-        Me.lbl_qty.Location = New System.Drawing.Point(514, 63)
+        Me.lbl_qty.Location = New System.Drawing.Point(513, 206)
         Me.lbl_qty.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_qty.Name = "lbl_qty"
-        Me.lbl_qty.Size = New System.Drawing.Size(111, 164)
+        Me.lbl_qty.Size = New System.Drawing.Size(110, 22)
         Me.lbl_qty.TabIndex = 71
         Me.lbl_qty.Text = "QTY"
         Me.lbl_qty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'lbl_product
-        '
-        Me.lbl_product.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lbl_product.AutoSize = True
-        Me.lbl_product.BackColor = System.Drawing.Color.Gainsboro
-        Me.lbl_product.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_product.ForeColor = System.Drawing.Color.Black
-        Me.lbl_product.Location = New System.Drawing.Point(3, 63)
-        Me.lbl_product.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.lbl_product.Name = "lbl_product"
-        Me.lbl_product.Size = New System.Drawing.Size(506, 164)
-        Me.lbl_product.TabIndex = 70
-        Me.lbl_product.Text = "Product"
-        Me.lbl_product.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label8
         '
@@ -378,7 +361,7 @@ Partial Class frm_vieworder_a174088
         Me.Label8.Location = New System.Drawing.Point(3, 1)
         Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(506, 61)
+        Me.Label8.Size = New System.Drawing.Size(505, 204)
         Me.Label8.TabIndex = 68
         Me.Label8.Text = "Product Name"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -392,10 +375,10 @@ Partial Class frm_vieworder_a174088
         Me.Label10.BackColor = System.Drawing.Color.DarkGray
         Me.Label10.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.Black
-        Me.Label10.Location = New System.Drawing.Point(630, 1)
+        Me.Label10.Location = New System.Drawing.Point(628, 1)
         Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(147, 61)
+        Me.Label10.Size = New System.Drawing.Size(147, 204)
         Me.Label10.TabIndex = 67
         Me.Label10.Text = "Price Per Unit"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -409,10 +392,10 @@ Partial Class frm_vieworder_a174088
         Me.Label9.BackColor = System.Drawing.Color.DarkGray
         Me.Label9.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.Black
-        Me.Label9.Location = New System.Drawing.Point(514, 1)
+        Me.Label9.Location = New System.Drawing.Point(513, 1)
         Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(111, 61)
+        Me.Label9.Size = New System.Drawing.Size(110, 204)
         Me.Label9.TabIndex = 67
         Me.Label9.Text = "Quantity"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -426,10 +409,10 @@ Partial Class frm_vieworder_a174088
         Me.lbl_Total.BackColor = System.Drawing.Color.DarkGray
         Me.lbl_Total.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_Total.ForeColor = System.Drawing.Color.Black
-        Me.lbl_Total.Location = New System.Drawing.Point(782, 228)
+        Me.lbl_Total.Location = New System.Drawing.Point(780, 229)
         Me.lbl_Total.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_Total.Name = "lbl_Total"
-        Me.lbl_Total.Size = New System.Drawing.Size(162, 46)
+        Me.lbl_Total.Size = New System.Drawing.Size(164, 45)
         Me.lbl_Total.TabIndex = 74
         Me.lbl_Total.Text = "TotalPrice"
         Me.lbl_Total.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -443,10 +426,10 @@ Partial Class frm_vieworder_a174088
         Me.Label18.BackColor = System.Drawing.Color.DarkGray
         Me.Label18.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.ForeColor = System.Drawing.Color.Black
-        Me.Label18.Location = New System.Drawing.Point(630, 228)
+        Me.Label18.Location = New System.Drawing.Point(628, 229)
         Me.Label18.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(147, 46)
+        Me.Label18.Size = New System.Drawing.Size(147, 45)
         Me.Label18.TabIndex = 75
         Me.Label18.Text = "Total Price"
         Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -460,10 +443,10 @@ Partial Class frm_vieworder_a174088
         Me.Label11.BackColor = System.Drawing.Color.DarkGray
         Me.Label11.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.Black
-        Me.Label11.Location = New System.Drawing.Point(782, 1)
+        Me.Label11.Location = New System.Drawing.Point(780, 1)
         Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(162, 61)
+        Me.Label11.Size = New System.Drawing.Size(164, 204)
         Me.Label11.TabIndex = 69
         Me.Label11.Text = "Total"
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -477,30 +460,13 @@ Partial Class frm_vieworder_a174088
         Me.lbl_unit.BackColor = System.Drawing.Color.Gainsboro
         Me.lbl_unit.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_unit.ForeColor = System.Drawing.Color.Black
-        Me.lbl_unit.Location = New System.Drawing.Point(630, 63)
+        Me.lbl_unit.Location = New System.Drawing.Point(628, 206)
         Me.lbl_unit.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_unit.Name = "lbl_unit"
-        Me.lbl_unit.Size = New System.Drawing.Size(147, 164)
+        Me.lbl_unit.Size = New System.Drawing.Size(147, 22)
         Me.lbl_unit.TabIndex = 72
         Me.lbl_unit.Text = "Unit"
         Me.lbl_unit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'lblSubTotal
-        '
-        Me.lblSubTotal.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblSubTotal.AutoSize = True
-        Me.lblSubTotal.BackColor = System.Drawing.Color.Gainsboro
-        Me.lblSubTotal.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSubTotal.ForeColor = System.Drawing.Color.Black
-        Me.lblSubTotal.Location = New System.Drawing.Point(782, 63)
-        Me.lblSubTotal.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.lblSubTotal.Name = "lblSubTotal"
-        Me.lblSubTotal.Size = New System.Drawing.Size(162, 164)
-        Me.lblSubTotal.TabIndex = 73
-        Me.lblSubTotal.Text = "SubTotal"
-        Me.lblSubTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label4
         '
@@ -596,6 +562,38 @@ Partial Class frm_vieworder_a174088
         Me.Panel4.Size = New System.Drawing.Size(1050, 651)
         Me.Panel4.TabIndex = 54
         '
+        'lbl_product
+        '
+        Me.lbl_product.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lbl_product.AutoSize = True
+        Me.lbl_product.BackColor = System.Drawing.Color.Gainsboro
+        Me.lbl_product.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_product.ForeColor = System.Drawing.Color.Black
+        Me.lbl_product.Location = New System.Drawing.Point(3, 206)
+        Me.lbl_product.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lbl_product.Name = "lbl_product"
+        Me.lbl_product.Size = New System.Drawing.Size(505, 22)
+        Me.lbl_product.TabIndex = 78
+        Me.lbl_product.Text = "Unit"
+        Me.lbl_product.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Gainsboro
+        Me.Label7.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label7.Font = New System.Drawing.Font("Times New Roman", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.Black
+        Me.Label7.Location = New System.Drawing.Point(780, 206)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(164, 22)
+        Me.Label7.TabIndex = 79
+        Me.Label7.Text = "Unit"
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'frm_vieworder_a174088
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -645,10 +643,8 @@ Partial Class frm_vieworder_a174088
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label11 As Label
-    Friend WithEvents lblSubTotal As Label
     Friend WithEvents lbl_unit As Label
     Friend WithEvents lbl_qty As Label
-    Friend WithEvents lbl_product As Label
     Friend WithEvents lbl_Total As Label
     Friend WithEvents Label18 As Label
     Friend WithEvents lbl_date As Label
@@ -665,4 +661,6 @@ Partial Class frm_vieworder_a174088
     Friend WithEvents Label5 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Panel4 As Panel
+    Friend WithEvents Label7 As Label
+    Friend WithEvents lbl_product As Label
 End Class

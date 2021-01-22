@@ -66,7 +66,7 @@
         lbl_product.Text = ""
         lbl_qty.Text = ""
         lbl_unit.Text = ""
-        lblSubTotal.Text = ""
+        Label7.Text = ""
         lbl_Total.Text = ""
 
         Dim purchase As DataTable = run_sql_4_query("SELECT * FROM TBL_PURCHASE_A174088 WHERE FLD_ORDER_ID = '" & Id & "'")
@@ -75,14 +75,14 @@
             lbl_product.Text += "#" + product.Rows(0).Item("FLD_PRODUCT_NAME") + Environment.NewLine
             lbl_qty.Text += row.Item("FLD_QUANTITY").ToString + Environment.NewLine
             lbl_unit.Text += "RM " + product.Rows(0).Item("FLD_PRICE").ToString + Environment.NewLine
-            lblSubTotal.Text += "RM " + row.Item("FLD_PRICE").ToString + Environment.NewLine
+            Label7.Text += "RM " + row.Item("FLD_PRICE").ToString + Environment.NewLine
             lbl_Total.Text = Val(lbl_Total.Text) + row.Item("FLD_PRICE")
         Next
 
         lbl_product.Text = lbl_product.Text.Remove(lbl_product.Text.LastIndexOf(Environment.NewLine))
         lbl_qty.Text = lbl_qty.Text.Remove(lbl_qty.Text.LastIndexOf(Environment.NewLine))
         lbl_unit.Text = lbl_unit.Text.Remove(lbl_unit.Text.LastIndexOf(Environment.NewLine))
-        lblSubTotal.Text = lblSubTotal.Text.Remove(lblSubTotal.Text.LastIndexOf(Environment.NewLine))
+        Label7.Text = Label7.Text.Remove(Label7.Text.LastIndexOf(Environment.NewLine))
         lbl_Total.Text = "RM " + lbl_Total.Text
     End Sub
 
