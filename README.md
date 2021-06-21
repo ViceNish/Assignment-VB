@@ -1,2 +1,2 @@
 # Assignment-VB
-Add Database assignment
+This was my Database assignment project.
